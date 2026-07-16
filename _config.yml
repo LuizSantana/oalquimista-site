@@ -1,0 +1,12 @@
+# GitHub Pages config
+# AASA deve ser servido sem extensão e com Content-Type: application/json
+# Jekyll ignora arquivos em .well-known por padrão — include abaixo resolve isso.
+
+title: OAlquimista
+description: "OAlquimista — livro de receitas pessoal para iPhone, iPad e Mac. Catálogo de receitas, Modo Cozinha com timers, importação inteligente e planejador de refeições."
+
+include:
+  - .well-known
+
+exclude:
+  - README.md

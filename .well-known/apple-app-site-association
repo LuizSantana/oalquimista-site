@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["66362QVWH7.br.com.luizsantana.oalquimista"],
+        "components": [
+          { "/": "/recipe/*" }
+        ]
+      }
+    ]
+  }
+}
