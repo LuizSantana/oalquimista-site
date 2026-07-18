@@ -7,6 +7,7 @@
   <meta name="description" content="Peça a mostarda artesanal O Alquimista direto do produtor." />
   <link rel="icon" href="../icon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <div class="wrap">
@@ -65,6 +66,10 @@
           <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </label>
 
+        <!-- TODO: troque pelo seu site key depois de criar o widget em
+             dash.cloudflare.com/?to=/:account/turnstile -->
+        <div class="cf-turnstile" data-sitekey="SEU_TURNSTILE_SITE_KEY"></div>
+
         <button type="submit">Enviar pedido</button>
         <p id="order-status" class="order-status" role="status"></p>
       </form>
@@ -77,21 +82,43 @@
 
   <script>
     // Preencha com a URL real do backend depois do deploy (veja BackendNode/infra/deploy.sh).
-    const ORDERS_API_URL = "https://SEU-SERVIDOR-AQUI/v1/orders";
+    const ORDERS_API_BASE = "https://SEU-SERVIDOR-AQUI/v1/orders";
 
     const form = document.getElementById("order-form");
     const status = document.getElementById("order-status");
+    let formToken = null;
+
+    async function fetchFormToken() {
+      try {
+        const res = await fetch(`${ORDERS_API_BASE}/token`);
+        const data = await res.json();
+        formToken = data.token;
+      } catch (err) {
+        // Submit will fail with a clear error below if this never resolves.
+      }
+    }
+    fetchFormToken();
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      if (!formToken) {
+        status.textContent = "Ainda carregando o formulário — aguarde um instante e tente de novo.";
+        status.className = "order-status error";
+        return;
+      }
+
       status.textContent = "Enviando...";
       status.className = "order-status";
 
       const data = Object.fromEntries(new FormData(form).entries());
       data.quantity = Number(data.quantity);
+      data.formToken = formToken;
+      data.turnstileToken = data["cf-turnstile-response"] ?? "";
+      delete data["cf-turnstile-response"];
 
       try {
-        const res = await fetch(ORDERS_API_URL, {
+        const res = await fetch(ORDERS_API_BASE, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -102,6 +129,8 @@
         status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
         status.className = "order-status success";
         form.reset();
+        if (window.turnstile) window.turnstile.reset();
+        fetchFormToken();
       } catch (err) {
         status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para suporte@oalquimista.store.";
         status.className = "order-status error";
