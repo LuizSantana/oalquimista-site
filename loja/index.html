@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OAlquimista — Loja</title>
+  <meta name="description" content="Peça a mostarda artesanal O Alquimista direto do produtor." />
+  <link rel="icon" href="../icon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="site-nav">
+      <a href="../">Início</a><span class="sep">·</span>
+      <a href="../sobre/">Sobre</a><span class="sep">·</span>
+      <a href="./" class="active">Loja</a><span class="sep">·</span>
+      <a href="../suporte/">Suporte</a><span class="sep">·</span>
+      <a href="../novidades/">Novidades</a><span class="sep">·</span>
+      <a href="../termos/">Termos</a><span class="sep">·</span>
+      <a href="../privacidade/">Privacidade</a>
+    </div>
+
+    <header class="page-header">
+      <img src="../icon.png" alt="O Alquimista" />
+      <h1>Faça seu pedido</h1>
+      <p class="intro">Mostarda artesanal O Alquimista — Fórmula II, feita em pequenos lotes.</p>
+    </header>
+
+    <section>
+      <h2><span class="dot"></span>Pedido</h2>
+      <form id="order-form" class="order-form" novalidate>
+        <label>
+          Produto
+          <select name="product" required>
+            <option value="Mostarda O Alquimista — Fórmula II">Mostarda O Alquimista — Fórmula II</option>
+          </select>
+        </label>
+        <label>
+          Quantidade
+          <input type="number" name="quantity" min="1" max="999" value="1" required />
+        </label>
+        <label>
+          Nome
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Telefone <span class="optional">(opcional)</span>
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Endereço de entrega <span class="optional">(opcional)</span>
+          <textarea name="address" rows="2"></textarea>
+        </label>
+        <label>
+          Observações <span class="optional">(opcional)</span>
+          <textarea name="notes" rows="2"></textarea>
+        </label>
+        <!-- Honeypot — real visitors never see or fill this field. -->
+        <label class="honeypot" aria-hidden="true">
+          Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
+
+        <button type="submit">Enviar pedido</button>
+        <p id="order-status" class="order-status" role="status"></p>
+      </form>
+    </section>
+
+    <footer>
+      <p>OAlquimista — <a href="../">oalquimista.store</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Preencha com a URL real do backend depois do deploy (veja BackendNode/infra/deploy.sh).
+    const ORDERS_API_URL = "https://SEU-SERVIDOR-AQUI/v1/orders";
+
+    const form = document.getElementById("order-form");
+    const status = document.getElementById("order-status");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      status.textContent = "Enviando...";
+      status.className = "order-status";
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.quantity = Number(data.quantity);
+
+      try {
+        const res = await fetch(ORDERS_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error(`status ${res.status}`);
+
+        status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
+        status.className = "order-status success";
+        form.reset();
+      } catch (err) {
+        status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para suporte@oalquimista.store.";
+        status.className = "order-status error";
+      }
+    });
+  </script>
+</body>
+</html>
