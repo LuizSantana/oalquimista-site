@@ -5,7 +5,7 @@ body {
   color: #1d1d1f;
   line-height: 1.5;
 }
-.wrap { max-width: 680px; margin: 0 auto; padding: 40px 24px 80px; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
 
 .site-nav { text-align: center; font-size: 0.85rem; margin-bottom: 32px; }
 .site-nav a { color: #6e6e73; text-decoration: none; margin: 0 8px; }
@@ -24,7 +24,31 @@ section > h2 {
 }
 section > h2 .dot { width: 8px; height: 8px; border-radius: 50%; background: #8B7200; }
 
-.order-form { display: flex; flex-direction: column; gap: 18px; }
+.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; margin-bottom: 20px; }
+.catalog-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.catalog-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.catalog-card .body { padding: 14px 16px 18px; }
+.catalog-card .formula { font-size: 0.68rem; letter-spacing: 0.04em; color: #8B7200; font-weight: 700; text-transform: uppercase; }
+.catalog-card .badge-new {
+  display: inline-block; background: #8B7200; color: #fff; font-size: 0.6rem;
+  font-weight: 800; padding: 1px 6px; border-radius: 5px; margin-left: 4px; letter-spacing: 0.03em;
+}
+.catalog-card h3 { font-size: 1.02rem; font-weight: 700; margin: 4px 0 2px; }
+.catalog-card .tipo { font-size: 0.82rem; color: #6e6e73; font-style: italic; margin-bottom: 8px; }
+.catalog-card .desc { font-size: 0.82rem; color: #48484a; margin-bottom: 10px; line-height: 1.4; }
+.catalog-card .price { font-weight: 700; color: #8B7200; font-size: 1rem; }
+
+.catalog-card.coming-soon {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border: 1px dashed #d0d0d5; box-shadow: none; min-height: 220px;
+}
+.catalog-card.coming-soon .body { padding: 20px; }
+.catalog-card.coming-soon .formula { color: #86868b; }
+.catalog-card.coming-soon .desc { color: #86868b; margin-bottom: 0; }
+
+.catalog-note { font-size: 0.82rem; color: #6e6e73; text-align: center; }
+
+.order-form { display: flex; flex-direction: column; gap: 18px; max-width: 480px; margin: 0 auto; }
 .order-form label {
   display: flex; flex-direction: column; gap: 6px;
   font-size: 0.92rem; font-weight: 600; color: #48484a;
