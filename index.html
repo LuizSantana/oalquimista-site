@@ -6,8 +6,8 @@
   <title>OAlquimista — Seu livro de receitas pessoal</title>
   <meta name="description" content="OAlquimista: catálogo de receitas, Modo Cozinha com timers, importação inteligente com Apple Intelligence, lista de compras e planejador de refeições. Sem anúncios, sem assinatura." />
   <link rel="canonical" href="https://oalquimista.store/" />
-  <link rel="icon" href="/assets/icons/favicon-32.png" type="image/png" />
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="OAlquimista" />
@@ -36,8 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="/assets/js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/theme.css" />
 </head>
 <body class="bg-surface font-body-md text-on-surface">
 <div class="noise-overlay"></div>
@@ -45,28 +45,28 @@
 <header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
   <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
     <div class="flex items-center gap-stack-lg">
-      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="/">O Alquimista</a>
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="./">O Alquimista</a>
       <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
-        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="/">Início</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/sobre/">Sobre</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/loja/">Loja</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/suporte/">Suporte</a>
-        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/novidades/">Novidades</a>
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="./">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="sobre/">Sobre</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="loja/">Loja</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="suporte/">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="novidades/">Novidades</a>
       </div>
     </div>
     <div class="flex items-center gap-stack-md">
-      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="/loja/" aria-label="Loja">shopping_bag</a>
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="loja/" aria-label="Loja">shopping_bag</a>
       <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
     </div>
   </nav>
   <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
-    <a class="font-label-md text-label-md text-primary font-bold" href="/">Início</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/sobre/">Sobre</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/loja/">Loja</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/suporte/">Suporte</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/novidades/">Novidades</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/termos/">Termos</a>
-    <a class="font-label-md text-label-md text-on-surface-variant" href="/privacidade/">Privacidade</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="sobre/">Sobre</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="loja/">Loja</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="suporte/">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="novidades/">Novidades</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="termos/">Termos</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="privacidade/">Privacidade</a>
   </div>
 </header>
 
@@ -76,7 +76,7 @@
     <div class="reveal-section max-w-4xl mx-auto space-y-stack-lg">
       <div class="w-32 h-32 md:w-48 md:h-48 mx-auto relative group">
         <div class="absolute inset-0 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-colors duration-700"></div>
-        <img alt="OAlquimista" class="relative z-10 w-full h-full object-contain filter drop-shadow-2xl" id="hero-logo" src="/assets/icons/hero-icon.png" width="192" height="192" />
+        <img alt="OAlquimista" class="relative z-10 w-full h-full object-contain filter drop-shadow-2xl" id="hero-logo" src="assets/icons/hero-icon.png" width="192" height="192" />
       </div>
       <div class="space-y-stack-sm">
         <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">OAlquimista — Seu Livro de Receitas Pessoal</h1>
@@ -158,25 +158,25 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter reveal-section">
         <div class="text-center">
           <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
-            <img alt="Catálogo de receitas no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/catalogo.jpg" width="150" height="326" loading="lazy" />
+            <img alt="Catálogo de receitas no OAlquimista" class="w-full h-auto object-cover" src="assets/screenshots/catalogo.jpg" width="150" height="326" loading="lazy" />
           </div>
           <span class="text-label-sm text-grey-text">Catálogo de receitas</span>
         </div>
         <div class="text-center md:mt-12">
           <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
-            <img alt="Modo Cozinha passo a passo no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/modo-cozinha.jpg" width="150" height="326" loading="lazy" />
+            <img alt="Modo Cozinha passo a passo no OAlquimista" class="w-full h-auto object-cover" src="assets/screenshots/modo-cozinha.jpg" width="150" height="326" loading="lazy" />
           </div>
           <span class="text-label-sm text-grey-text">Modo Cozinha</span>
         </div>
         <div class="text-center">
           <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
-            <img alt="Importação inteligente de receitas no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/importacao.jpg" width="150" height="326" loading="lazy" />
+            <img alt="Importação inteligente de receitas no OAlquimista" class="w-full h-auto object-cover" src="assets/screenshots/importacao.jpg" width="150" height="326" loading="lazy" />
           </div>
           <span class="text-label-sm text-grey-text">Importação inteligente</span>
         </div>
         <div class="text-center md:mt-12">
           <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
-            <img alt="Planejador de refeições no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/planejador.jpg" width="150" height="326" loading="lazy" />
+            <img alt="Planejador de refeições no OAlquimista" class="w-full h-auto object-cover" src="assets/screenshots/planejador.jpg" width="150" height="326" loading="lazy" />
           </div>
           <span class="text-label-sm text-grey-text">Planejador de refeições</span>
         </div>
@@ -208,7 +208,7 @@
       <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
       <h2 class="font-headline-md text-headline-md mb-4">Privacidade em primeiro lugar</h2>
       <p class="font-body-md text-on-surface-variant mb-8">Suas receitas ficam armazenadas localmente e sincronizadas apenas via iCloud privado. Sem cadastro, sem servidor próprio, sem anúncios, sem venda de dados.</p>
-      <a class="text-primary font-label-md uppercase tracking-widest hover:underline underline-offset-8" href="/privacidade/">Ver Política de Privacidade completa →</a>
+      <a class="text-primary font-label-md uppercase tracking-widest hover:underline underline-offset-8" href="privacidade/">Ver Política de Privacidade completa →</a>
     </div>
   </section>
 
@@ -217,7 +217,7 @@
     <div class="px-margin-mobile">
       <h3 class="font-headline-sm text-headline-sm mb-6">Pronto pra começar?</h3>
       <p class="font-body-md text-on-surface-variant mb-6">OAlquimista chega em breve à App Store.</p>
-      <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-2xl hover:scale-105 active:scale-95 transition-all" href="/suporte/">
+      <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-2xl hover:scale-105 active:scale-95 transition-all" href="suporte/">
         Precisa de ajuda? Central de Suporte
         <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
@@ -233,27 +233,27 @@
     </div>
     <div class="flex flex-col gap-3">
       <span class="font-label-md text-primary mb-2">Explorar</span>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/sobre/">Sobre</a>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/loja/">Loja</a>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/novidades/">Novidades</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="sobre/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="loja/">Loja</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="novidades/">Novidades</a>
     </div>
     <div class="flex flex-col gap-3">
       <span class="font-label-md text-primary mb-2">Suporte</span>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/suporte/">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="suporte/">Central de Suporte</a>
       <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
     </div>
     <div class="flex flex-col gap-3">
       <span class="font-label-md text-primary mb-2">Legal</span>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/termos/">Termos de Uso</a>
-      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/privacidade/">Política de Privacidade</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="termos/">Termos de Uso</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="privacidade/">Política de Privacidade</a>
     </div>
   </div>
   <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
-    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="/">oalquimista.store</a></p>
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="./">oalquimista.store</a></p>
   </div>
 </footer>
 
-<script src="/assets/js/theme.js" defer></script>
+<script src="assets/js/theme.js" defer></script>
 <script defer>
   // Subtle hero-logo tilt on mouse move — purely decorative, guarded by prefers-reduced-motion.
   document.addEventListener("DOMContentLoaded", () => {
