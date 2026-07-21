@@ -70,6 +70,11 @@
             <p class="tipo">Molho Barbecue · Defumado &amp; Intenso</p>
             <p class="desc">Molho encorpado com notas de defumado, canela e melaço de cana.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Defumado — Molho Barbecue (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -80,6 +85,11 @@
             <p class="tipo">Molho de Mostarda · Suave &amp; Encorpado</p>
             <p class="desc">A receita base — grãos de mostarda fermentados por 21 dias.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Dourado — Molho de Mostarda (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -90,6 +100,11 @@
             <p class="tipo">Mostarda Apimentada · Dourado &amp; com Fogo</p>
             <p class="desc">Mostarda artesanal com pimenta dedo-de-moça. Calor gradual.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Picante — Mostarda Apimentada (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -100,6 +115,11 @@
             <p class="tipo">Mostarda Lemon Pepper · Fresco &amp; Limonado</p>
             <p class="desc">Frescor cítrico intenso, pimenta-preta e casca de limão.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Cítrico — Mostarda Lemon Pepper (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -110,6 +130,11 @@
             <p class="tipo">Chimichurri Clássico · Fresco &amp; Aromático</p>
             <p class="desc">Salsinha, orégano, alho e pimenta em equilíbrio perfeito.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir das Ervas — Chimichurri Clássico (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -120,6 +145,11 @@
             <p class="tipo">Chimichurri Defumado · Ervas &amp; Fumaça</p>
             <p class="desc">A fumaça fria encontra o verde das ervas — ideal para churrasco.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Defumado Verde — Chimichurri Defumado (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -130,6 +160,11 @@
             <p class="tipo">Ketchup Artesanal · Suave &amp; Aveludado</p>
             <p class="desc">Sem conservantes, corantes ou estabilizantes.</p>
             <p class="price">R$ 50,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir Vermelho — Ketchup Artesanal (R$ 50,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card">
@@ -140,6 +175,11 @@
             <p class="tipo">Molho Dourado de Cúrcuma · Dourado &amp; Auspicioso</p>
             <p class="desc">Cor dourada vibrante — melaço de cana, cúrcuma e gengibre fresco.</p>
             <p class="price">R$ 70,00</p>
+            <label class="qty-control">
+              Qtd.
+              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
+                     data-product="Elixir do Afortunado — Molho Dourado de Cúrcuma (R$ 70,00)" />
+            </label>
           </div>
         </div>
         <div class="catalog-card coming-soon">
@@ -151,29 +191,13 @@
           </div>
         </div>
       </div>
-      <p class="catalog-note">Pote de vidro 300g · Pedido mínimo 6 potes (pode misturar sabores — escreva nas observações) · Entrega Grande São Paulo · Prazo 7 dias úteis após confirmação.</p>
+      <p class="catalog-note">Pote de vidro 300g · Pedido mínimo 6 potes no total (pode misturar sabores à vontade) · Entrega Grande São Paulo · Prazo 7 dias úteis após confirmação.</p>
     </section>
 
     <section>
       <h2><span class="dot"></span>Pedido</h2>
+      <p id="cart-summary" class="cart-summary">Escolha as quantidades no catálogo acima. Nenhum produto selecionado ainda.</p>
       <form id="order-form" class="order-form" novalidate>
-        <label>
-          Produto
-          <select name="product" required>
-            <option value="Elixir Defumado — Molho Barbecue (R$ 70,00)">Elixir Defumado — Molho Barbecue (R$ 70,00)</option>
-            <option value="Elixir Dourado — Molho de Mostarda (R$ 70,00)" selected>Elixir Dourado — Molho de Mostarda (R$ 70,00)</option>
-            <option value="Elixir Picante — Mostarda Apimentada (R$ 70,00)">Elixir Picante — Mostarda Apimentada (R$ 70,00)</option>
-            <option value="Elixir Cítrico — Mostarda Lemon Pepper (R$ 70,00)">Elixir Cítrico — Mostarda Lemon Pepper (R$ 70,00)</option>
-            <option value="Elixir das Ervas — Chimichurri Clássico (R$ 70,00)">Elixir das Ervas — Chimichurri Clássico (R$ 70,00)</option>
-            <option value="Elixir Defumado Verde — Chimichurri Defumado (R$ 70,00)">Elixir Defumado Verde — Chimichurri Defumado (R$ 70,00)</option>
-            <option value="Elixir Vermelho — Ketchup Artesanal (R$ 50,00)">Elixir Vermelho — Ketchup Artesanal (R$ 50,00)</option>
-            <option value="Elixir do Afortunado — Molho Dourado de Cúrcuma (R$ 70,00)">Elixir do Afortunado — Molho Dourado de Cúrcuma (R$ 70,00)</option>
-          </select>
-        </label>
-        <label>
-          Quantidade
-          <input type="number" name="quantity" min="1" max="999" value="1" required />
-        </label>
         <label>
           Nome
           <input type="text" name="name" required />
@@ -220,6 +244,8 @@
 
     const form = document.getElementById("order-form");
     const status = document.getElementById("order-status");
+    const cartSummary = document.getElementById("cart-summary");
+    const qtyInputs = Array.from(document.querySelectorAll(".qty-input"));
     let formToken = null;
 
     async function fetchFormToken() {
@@ -233,8 +259,36 @@
     }
     fetchFormToken();
 
+    function collectItems() {
+      return qtyInputs
+        .map((input) => ({ product: input.dataset.product, quantity: Number(input.value) || 0 }))
+        .filter((item) => item.quantity > 0);
+    }
+
+    function updateCartSummary() {
+      const items = collectItems();
+      if (items.length === 0) {
+        cartSummary.textContent = "Escolha as quantidades no catálogo acima. Nenhum produto selecionado ainda.";
+        cartSummary.className = "cart-summary";
+        return;
+      }
+      const total = items.reduce((sum, item) => sum + item.quantity, 0);
+      const list = items.map((item) => `${item.quantity}x ${item.product.split(" — ")[0]}`).join(", ");
+      cartSummary.textContent = `${total} pote${total > 1 ? "s" : ""} selecionado${total > 1 ? "s" : ""}: ${list}`;
+      cartSummary.className = "cart-summary" + (total < 6 ? " warn" : " ok");
+    }
+
+    qtyInputs.forEach((input) => input.addEventListener("input", updateCartSummary));
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      const items = collectItems();
+      if (items.length === 0) {
+        status.textContent = "Escolha ao menos 1 produto no catálogo acima antes de enviar.";
+        status.className = "order-status error";
+        return;
+      }
 
       if (!formToken) {
         status.textContent = "Ainda carregando o formulário — aguarde um instante e tente de novo.";
@@ -246,7 +300,7 @@
       status.className = "order-status";
 
       const data = Object.fromEntries(new FormData(form).entries());
-      data.quantity = Number(data.quantity);
+      data.items = items;
       data.formToken = formToken;
       data.turnstileToken = data["cf-turnstile-response"] ?? "";
       delete data["cf-turnstile-response"];
@@ -263,6 +317,8 @@
         status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
         status.className = "order-status success";
         form.reset();
+        qtyInputs.forEach((input) => (input.value = 0));
+        updateCartSummary();
         if (window.turnstile) window.turnstile.reset();
         fetchFormToken();
       } catch (err) {
