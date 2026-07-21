@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="scroll-smooth" lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,188 +38,247 @@
   }
   </script>
 
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<body>
-  <div class="wrap">
-    <div class="site-nav">
-      <a href="../">Início</a><span class="sep">·</span>
-      <a href="../sobre/">Sobre</a><span class="sep">·</span>
-      <a href="./" class="active">Loja</a><span class="sep">·</span>
-      <a href="../suporte/">Suporte</a><span class="sep">·</span>
-      <a href="../novidades/">Novidades</a><span class="sep">·</span>
-      <a href="../termos/">Termos</a><span class="sep">·</span>
-      <a href="../privacidade/">Privacidade</a>
-    </div>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
 
-    <header class="page-header">
-      <img src="../assets/icons/hero-icon.png" alt="O Alquimista" />
-      <h1>Molhos e Mostardas Artesanais O Alquimista</h1>
-      <p class="intro">Fermentação natural, ingredientes selecionados, feitos em pequenos lotes direto do produtor.</p>
-    </header>
-
-    <section>
-      <h2><span class="dot"></span>Catálogo</h2>
-      <div class="catalog">
-        <div class="catalog-card">
-          <img src="../assets/labels/bbq.jpg" alt="Rótulo Elixir Defumado — Molho Barbecue" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula I</span>
-            <h3>Elixir Defumado</h3>
-            <p class="tipo">Molho Barbecue · Defumado &amp; Intenso</p>
-            <p class="desc">Molho encorpado com notas de defumado, canela e melaço de cana.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Defumado — Molho Barbecue (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/mostarda.jpg" alt="Rótulo Elixir Dourado — Molho de Mostarda" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula II</span>
-            <h3>Elixir Dourado</h3>
-            <p class="tipo">Molho de Mostarda · Suave &amp; Encorpado</p>
-            <p class="desc">A receita base — grãos de mostarda fermentados por 21 dias.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Dourado — Molho de Mostarda (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/picante.jpg" alt="Rótulo Elixir Picante — Mostarda Apimentada" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula III</span>
-            <h3>Elixir Picante</h3>
-            <p class="tipo">Mostarda Apimentada · Dourado &amp; com Fogo</p>
-            <p class="desc">Mostarda artesanal com pimenta dedo-de-moça. Calor gradual.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Picante — Mostarda Apimentada (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/citrico.jpg" alt="Rótulo Elixir Cítrico — Mostarda Lemon Pepper" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula IV</span>
-            <h3>Elixir Cítrico</h3>
-            <p class="tipo">Mostarda Lemon Pepper · Fresco &amp; Limonado</p>
-            <p class="desc">Frescor cítrico intenso, pimenta-preta e casca de limão.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Cítrico — Mostarda Lemon Pepper (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/chimichurri.jpg" alt="Rótulo Elixir das Ervas — Chimichurri Clássico" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula V</span>
-            <h3>Elixir das Ervas</h3>
-            <p class="tipo">Chimichurri Clássico · Fresco &amp; Aromático</p>
-            <p class="desc">Salsinha, orégano, alho e pimenta em equilíbrio perfeito.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir das Ervas — Chimichurri Clássico (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/chimid.jpg" alt="Rótulo Elixir Defumado Verde — Chimichurri Defumado" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula VI</span>
-            <h3>Elixir Defumado Verde</h3>
-            <p class="tipo">Chimichurri Defumado · Ervas &amp; Fumaça</p>
-            <p class="desc">A fumaça fria encontra o verde das ervas — ideal para churrasco.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Defumado Verde — Chimichurri Defumado (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/ketchup.jpg" alt="Rótulo Elixir Vermelho — Ketchup Artesanal" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula VII</span>
-            <h3>Elixir Vermelho</h3>
-            <p class="tipo">Ketchup Artesanal · Suave &amp; Aveludado</p>
-            <p class="desc">Sem conservantes, corantes ou estabilizantes.</p>
-            <p class="price">R$ 50,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir Vermelho — Ketchup Artesanal (R$ 50,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card">
-          <img src="../assets/labels/afortunado.jpg" alt="Rótulo Elixir do Afortunado — Molho Dourado de Cúrcuma" width="240" height="240" loading="lazy" />
-          <div class="body">
-            <span class="formula">Fórmula IX <span class="badge-new">NOVO</span></span>
-            <h3>Elixir do Afortunado</h3>
-            <p class="tipo">Molho Dourado de Cúrcuma · Dourado &amp; Auspicioso</p>
-            <p class="desc">Cor dourada vibrante — melaço de cana, cúrcuma e gengibre fresco.</p>
-            <p class="price">R$ 70,00</p>
-            <label class="qty-control">
-              Qtd.
-              <input type="number" class="qty-input" min="0" max="99" value="0" inputmode="numeric"
-                     data-product="Elixir do Afortunado — Molho Dourado de Cúrcuma (R$ 70,00)" />
-            </label>
-          </div>
-        </div>
-        <div class="catalog-card coming-soon">
-          <div class="body">
-            <span class="formula">Fórmula VIII</span>
-            <h3>Elixir da Goiaba</h3>
-            <p class="tipo">Ketchup de Goiabada</p>
-            <p class="desc">Em testes — em breve no catálogo.</p>
-          </div>
-        </div>
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../sobre/">Sobre</a>
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="./">Loja</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../suporte/">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../novidades/">Novidades</a>
       </div>
-      <p class="catalog-note">Pote de vidro 300g · Pedido mínimo 6 potes no total (pode misturar sabores à vontade) · Entrega Grande São Paulo · Prazo 7 dias úteis após confirmação.</p>
-    </section>
+    </div>
+    <div class="flex items-center gap-stack-md">
+      <div class="relative cursor-pointer" onclick="document.getElementById('cart-section').scrollIntoView({behavior:'smooth'})">
+        <span class="material-symbols-outlined text-primary p-2">shopping_bag</span>
+        <span class="hidden absolute -top-1 -right-1 bg-primary text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold" id="cart-badge">0</span>
+      </div>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../sobre/">Sobre</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">Loja</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../suporte/">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../novidades/">Novidades</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../termos/">Termos</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../privacidade/">Privacidade</a>
+  </div>
+</header>
 
-    <section>
-      <h2><span class="dot"></span>Pedido</h2>
-      <p id="cart-summary" class="cart-summary">Escolha as quantidades no catálogo acima. Nenhum produto selecionado ainda.</p>
-      <form id="order-form" class="order-form" novalidate>
-        <label>
-          Nome
-          <input type="text" name="name" required />
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop">
+  <!-- Hero -->
+  <header class="mb-stack-lg reveal-section max-w-3xl">
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Molhos e Mostardas Artesanais</h1>
+    <p class="font-body-lg text-body-lg text-grey-text">Fermentação natural, ingredientes selecionados, feitos em pequenos lotes direto do produtor.</p>
+  </header>
+
+  <!-- Catalog -->
+  <section class="mb-stack-lg">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter" id="product-grid">
+      <!-- Fórmula I -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Defumado — Molho Barbecue" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/bbq.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula I</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Defumado</h3>
+          <p class="text-label-sm text-grey-text mb-3">Molho Barbecue · Defumado &amp; Intenso</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Molho encorpado com notas de defumado, canela e melaço de cana.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Defumado — Molho Barbecue (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula II -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:50ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Dourado — Molho de Mostarda" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/mostarda.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula II</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Dourado</h3>
+          <p class="text-label-sm text-grey-text mb-3">Molho de Mostarda · Suave &amp; Encorpado</p>
+          <p class="text-body-md text-on-surface-variant mb-4">A receita base — grãos de mostarda fermentados por 21 dias.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Dourado — Molho de Mostarda (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula III -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:100ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Picante — Mostarda Apimentada" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/picante.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula III</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Picante</h3>
+          <p class="text-label-sm text-grey-text mb-3">Mostarda Apimentada · Dourado &amp; com Fogo</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Mostarda artesanal com pimenta dedo-de-moça. Calor gradual.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Picante — Mostarda Apimentada (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula IV -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:150ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Cítrico — Mostarda Lemon Pepper" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/citrico.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula IV</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Cítrico</h3>
+          <p class="text-label-sm text-grey-text mb-3">Mostarda Lemon Pepper · Fresco &amp; Limonado</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Frescor cítrico intenso, pimenta-preta e casca de limão.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Cítrico — Mostarda Lemon Pepper (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula V -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir das Ervas — Chimichurri Clássico" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/chimichurri.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula V</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir das Ervas</h3>
+          <p class="text-label-sm text-grey-text mb-3">Chimichurri Clássico · Fresco &amp; Aromático</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Salsinha, orégano, alho e pimenta em equilíbrio perfeito.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir das Ervas — Chimichurri Clássico (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula VI -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:50ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Defumado Verde — Chimichurri Defumado" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/chimid.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula VI</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Defumado Verde</h3>
+          <p class="text-label-sm text-grey-text mb-3">Chimichurri Defumado · Ervas &amp; Fumaça</p>
+          <p class="text-body-md text-on-surface-variant mb-4">A fumaça fria encontra o verde das ervas — ideal para churrasco.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Defumado Verde — Chimichurri Defumado (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula VII -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:100ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir Vermelho — Ketchup Artesanal" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/ketchup.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula VII</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir Vermelho</h3>
+          <p class="text-label-sm text-grey-text mb-3">Ketchup Artesanal · Suave &amp; Aveludado</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Sem conservantes, corantes ou estabilizantes.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 50,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir Vermelho — Ketchup Artesanal (R$ 50,00)" data-price="50.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula IX -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section" style="transition-delay:150ms">
+        <div class="h-56 overflow-hidden"><img alt="Rótulo Elixir do Afortunado — Molho Dourado de Cúrcuma" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="../assets/labels/afortunado.jpg" width="300" height="224" loading="lazy" /></div>
+        <div class="p-6">
+          <span class="text-label-sm text-primary uppercase tracking-wider font-bold">Fórmula IX <span class="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-widest font-bold ml-1">Novo</span></span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir do Afortunado</h3>
+          <p class="text-label-sm text-grey-text mb-3">Molho Dourado de Cúrcuma · Dourado &amp; Auspicioso</p>
+          <p class="text-body-md text-on-surface-variant mb-4">Cor dourada vibrante — melaço de cana, cúrcuma e gengibre fresco.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-primary text-body-lg">R$ 70,00</span>
+            <div class="stepper flex items-center gap-3 bg-surface-container-low px-3 py-2 rounded-full border border-outline-variant/20">
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="-1">remove</button>
+              <input type="number" class="qty-input w-8 text-center font-bold text-label-md bg-transparent border-0 p-0 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" min="0" max="99" value="0" inputmode="numeric" data-product="Elixir do Afortunado — Molho Dourado de Cúrcuma (R$ 70,00)" data-price="70.00" />
+              <button type="button" class="material-symbols-outlined text-primary text-[20px]" data-step="1">add</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Fórmula VIII — em testes -->
+      <article class="glass-card rounded-xl overflow-hidden reveal-section opacity-70">
+        <div class="h-56 flex items-center justify-center bg-surface-container-high">
+          <span class="material-symbols-outlined text-5xl text-outline">science</span>
+        </div>
+        <div class="p-6">
+          <span class="text-label-sm text-grey-text uppercase tracking-wider font-bold">Fórmula VIII</span>
+          <h3 class="font-headline-sm text-headline-sm text-ink mt-1 mb-1">Elixir da Goiaba</h3>
+          <p class="text-label-sm text-grey-text mb-3">Ketchup de Goiabada</p>
+          <p class="text-body-md text-on-surface-variant">Em testes — em breve no catálogo.</p>
+        </div>
+      </article>
+    </div>
+    <p class="text-label-sm text-grey-text mt-8 max-w-2xl">Pote de vidro 300g · Pedido mínimo 6 potes no total (pode misturar sabores à vontade) · Entrega Grande São Paulo · Prazo 7 dias úteis após confirmação.</p>
+  </section>
+
+  <!-- Cart & Order -->
+  <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start" id="cart-section">
+    <div class="lg:col-span-7 glass-card p-stack-lg rounded-xl reveal-section">
+      <h2 class="font-headline-md text-headline-md mb-8">Dados do Pedido</h2>
+      <form id="order-form" class="space-y-6" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+          <label class="space-y-2 block">
+            <span class="font-label-md text-label-md text-on-surface-variant">Nome</span>
+            <input class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary text-body-md transition-all" name="name" required type="text" />
+          </label>
+          <label class="space-y-2 block">
+            <span class="font-label-md text-label-md text-on-surface-variant">Email</span>
+            <input class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary text-body-md transition-all" name="email" required type="email" />
+          </label>
+        </div>
+        <label class="space-y-2 block">
+          <span class="font-label-md text-label-md text-on-surface-variant">Telefone <span class="font-normal normal-case text-grey-text">(opcional)</span></span>
+          <input class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary text-body-md transition-all" name="phone" type="tel" />
         </label>
-        <label>
-          Email
-          <input type="email" name="email" required />
+        <label class="space-y-2 block">
+          <span class="font-label-md text-label-md text-on-surface-variant">Endereço de entrega <span class="font-normal normal-case text-grey-text">(opcional)</span></span>
+          <textarea class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary text-body-md transition-all" name="address" rows="2"></textarea>
         </label>
-        <label>
-          Telefone <span class="optional">(opcional)</span>
-          <input type="tel" name="phone" />
+        <label class="space-y-2 block">
+          <span class="font-label-md text-label-md text-on-surface-variant">Observações <span class="font-normal normal-case text-grey-text">(opcional)</span></span>
+          <textarea class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary text-body-md transition-all" name="notes" rows="2"></textarea>
         </label>
-        <label>
-          Endereço de entrega <span class="optional">(opcional)</span>
-          <textarea name="address" rows="2"></textarea>
-        </label>
-        <label>
-          Observações <span class="optional">(opcional)</span>
-          <textarea name="notes" rows="2"></textarea>
-        </label>
+
         <!-- Honeypot — real visitors never see or fill this field. -->
-        <label class="honeypot" aria-hidden="true">
+        <label class="honeypot absolute -left-[9999px]" aria-hidden="true">
           Website
           <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </label>
@@ -228,104 +287,192 @@
              dash.cloudflare.com/?to=/:account/turnstile -->
         <div class="cf-turnstile" data-sitekey="SEU_TURNSTILE_SITE_KEY"></div>
 
-        <button type="submit">Enviar pedido</button>
-        <p id="order-status" class="order-status" role="status"></p>
+        <button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all duration-300" type="submit">Enviar pedido</button>
+        <p id="order-status" class="text-body-md" role="status"></p>
       </form>
-    </section>
+    </div>
 
-    <footer>
-      <p>OAlquimista — <a href="../">oalquimista.store</a></p>
-    </footer>
+    <div class="lg:col-span-5 lg:sticky lg:top-28 glass-card p-stack-lg rounded-xl reveal-section">
+      <h2 class="font-headline-md text-headline-md mb-6">Carrinho</h2>
+      <div class="space-y-3 mb-8" id="cart-items">
+        <p class="text-grey-text text-body-md italic">Sua cesta está vazia.</p>
+      </div>
+      <div class="pt-6 border-t border-outline-variant/20 space-y-2">
+        <div class="flex justify-between items-center text-body-md text-on-surface-variant">
+          <span>Total de Potes</span>
+          <span class="font-bold text-primary" id="total-potes">0</span>
+        </div>
+        <div class="flex justify-between items-baseline pt-4">
+          <span class="font-headline-sm text-headline-sm">Valor Estimado</span>
+          <span class="font-display-lg text-primary text-headline-md" id="total-price">R$ 0,00</span>
+        </div>
+      </div>
+      <div class="mt-8 flex gap-3 p-4 bg-secondary-container/30 rounded-lg">
+        <span class="material-symbols-outlined text-secondary">info</span>
+        <p class="text-label-sm text-on-secondary-container">Pedido mínimo de 6 potes no total. Os preços podem variar conforme a sazonalidade dos ingredientes artesanais.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">Molhos e mostardas artesanais, feitos em pequenos lotes.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explorar</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../">Início</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../sobre/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../novidades/">Novidades</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Suporte</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../suporte/">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../termos/">Termos de Uso</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../privacidade/">Política de Privacidade</a>
+    </div>
   </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../">oalquimista.store</a></p>
+  </div>
+</footer>
 
-  <script>
-    // Preencha com a URL real do backend depois do deploy (veja BackendNode/infra/deploy.sh).
-    const ORDERS_API_BASE = "https://SEU-SERVIDOR-AQUI/v1/orders";
+<script src="../assets/js/theme.js" defer></script>
+<script>
+  // Preencha com a URL real do backend depois do deploy (veja BackendNode/infra/deploy.sh).
+  const ORDERS_API_BASE = "https://SEU-SERVIDOR-AQUI/v1/orders";
 
-    const form = document.getElementById("order-form");
-    const status = document.getElementById("order-status");
-    const cartSummary = document.getElementById("cart-summary");
-    const qtyInputs = Array.from(document.querySelectorAll(".qty-input"));
-    let formToken = null;
+  const form = document.getElementById("order-form");
+  const status = document.getElementById("order-status");
+  const cartItemsEl = document.getElementById("cart-items");
+  const totalPotesEl = document.getElementById("total-potes");
+  const totalPriceEl = document.getElementById("total-price");
+  const cartBadge = document.getElementById("cart-badge");
+  const qtyInputs = Array.from(document.querySelectorAll(".qty-input"));
+  let formToken = null;
 
-    async function fetchFormToken() {
-      try {
-        const res = await fetch(`${ORDERS_API_BASE}/token`);
-        const data = await res.json();
-        formToken = data.token;
-      } catch (err) {
-        // Submit will fail with a clear error below if this never resolves.
-      }
+  async function fetchFormToken() {
+    try {
+      const res = await fetch(`${ORDERS_API_BASE}/token`);
+      const data = await res.json();
+      formToken = data.token;
+    } catch (err) {
+      // Submit will fail with a clear error below if this never resolves.
     }
-    fetchFormToken();
+  }
+  fetchFormToken();
 
-    function collectItems() {
-      return qtyInputs
-        .map((input) => ({ product: input.dataset.product, quantity: Number(input.value) || 0 }))
-        .filter((item) => item.quantity > 0);
+  function collectItems() {
+    return qtyInputs
+      .map((input) => ({
+        product: input.dataset.product,
+        quantity: Number(input.value) || 0,
+        price: Number(input.dataset.price) || 0,
+      }))
+      .filter((item) => item.quantity > 0);
+  }
+
+  function updateCartSummary() {
+    const items = collectItems();
+    const totalPotes = items.reduce((sum, item) => sum + item.quantity, 0);
+    const totalPrice = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
+
+    cartItemsEl.innerHTML = items.length
+      ? items
+          .map(
+            (item) => `
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="font-label-md text-on-surface">${item.product.split(" (R$")[0]}</p>
+            <p class="text-label-sm text-grey-text">${item.quantity}x R$ ${item.price.toFixed(2).replace(".", ",")}</p>
+          </div>
+          <span class="font-bold text-on-surface">R$ ${(item.price * item.quantity).toFixed(2).replace(".", ",")}</span>
+        </div>`
+          )
+          .join("")
+      : '<p class="text-grey-text text-body-md italic">Sua cesta está vazia.</p>';
+
+    totalPotesEl.textContent = totalPotes;
+    totalPriceEl.textContent = `R$ ${totalPrice.toFixed(2).replace(".", ",")}`;
+
+    if (totalPotes > 0) {
+      cartBadge.classList.remove("hidden");
+      cartBadge.textContent = totalPotes;
+      cartBadge.classList.add("cart-bump");
+      setTimeout(() => cartBadge.classList.remove("cart-bump"), 300);
+    } else {
+      cartBadge.classList.add("hidden");
     }
+  }
 
-    function updateCartSummary() {
-      const items = collectItems();
-      if (items.length === 0) {
-        cartSummary.textContent = "Escolha as quantidades no catálogo acima. Nenhum produto selecionado ainda.";
-        cartSummary.className = "cart-summary";
-        return;
-      }
-      const total = items.reduce((sum, item) => sum + item.quantity, 0);
-      const list = items.map((item) => `${item.quantity}x ${item.product.split(" — ")[0]}`).join(", ");
-      cartSummary.textContent = `${total} pote${total > 1 ? "s" : ""} selecionado${total > 1 ? "s" : ""}: ${list}`;
-      cartSummary.className = "cart-summary" + (total < 6 ? " warn" : " ok");
-    }
-
-    qtyInputs.forEach((input) => input.addEventListener("input", updateCartSummary));
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const items = collectItems();
-      if (items.length === 0) {
-        status.textContent = "Escolha ao menos 1 produto no catálogo acima antes de enviar.";
-        status.className = "order-status error";
-        return;
-      }
-
-      if (!formToken) {
-        status.textContent = "Ainda carregando o formulário — aguarde um instante e tente de novo.";
-        status.className = "order-status error";
-        return;
-      }
-
-      status.textContent = "Enviando...";
-      status.className = "order-status";
-
-      const data = Object.fromEntries(new FormData(form).entries());
-      data.items = items;
-      data.formToken = formToken;
-      data.turnstileToken = data["cf-turnstile-response"] ?? "";
-      delete data["cf-turnstile-response"];
-
-      try {
-        const res = await fetch(ORDERS_API_BASE, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-
-        if (!res.ok) throw new Error(`status ${res.status}`);
-
-        status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
-        status.className = "order-status success";
-        form.reset();
-        qtyInputs.forEach((input) => (input.value = 0));
-        updateCartSummary();
-        if (window.turnstile) window.turnstile.reset();
-        fetchFormToken();
-      } catch (err) {
-        status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para suporte@oalquimista.store.";
-        status.className = "order-status error";
-      }
+  qtyInputs.forEach((input) => {
+    input.addEventListener("input", updateCartSummary);
+    const stepper = input.closest(".stepper");
+    if (!stepper) return;
+    stepper.querySelectorAll("[data-step]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const delta = Number(button.dataset.step);
+        const next = Math.max(0, Math.min(99, (Number(input.value) || 0) + delta));
+        input.value = next;
+        input.dispatchEvent(new Event("input"));
+      });
     });
-  </script>
+  });
+
+  updateCartSummary();
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const items = collectItems().map(({ product, quantity }) => ({ product, quantity }));
+    if (items.length === 0) {
+      status.textContent = "Escolha ao menos 1 produto no catálogo acima antes de enviar.";
+      status.className = "text-body-md text-error";
+      return;
+    }
+
+    if (!formToken) {
+      status.textContent = "Ainda carregando o formulário — aguarde um instante e tente de novo.";
+      status.className = "text-body-md text-error";
+      return;
+    }
+
+    status.textContent = "Enviando...";
+    status.className = "text-body-md";
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.items = items;
+    data.formToken = formToken;
+    data.turnstileToken = data["cf-turnstile-response"] ?? "";
+    delete data["cf-turnstile-response"];
+
+    try {
+      const res = await fetch(ORDERS_API_BASE, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error(`status ${res.status}`);
+
+      status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
+      status.className = "text-body-md text-primary font-semibold";
+      form.reset();
+      qtyInputs.forEach((input) => (input.value = 0));
+      updateCartSummary();
+      if (window.turnstile) window.turnstile.reset();
+      fetchFormToken();
+    } catch (err) {
+      status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para suporte@oalquimista.store.";
+      status.className = "text-body-md text-error";
+    }
+  });
+</script>
 </body>
 </html>

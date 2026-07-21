@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="scroll-smooth" lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,220 +29,249 @@
     "operatingSystem": "iOS, iPadOS, macOS",
     "url": "https://oalquimista.store/",
     "description": "Livro de receitas pessoal com catálogo de receitas, Modo Cozinha com timers, importação inteligente e planejador de refeições. Sem anúncios, sem assinatura, sem cadastro.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "BRL"
-    }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
   }
   </script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --gold: #D4A853;
-      --gold-text: #8B7200;
-      --ink: #1d1d1f;
-      --muted: #6e6e73;
-      --muted2: #48484a;
-      --bg: #ffffff;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.5;
-    }
-    a { color: inherit; }
 
-    .site-nav { display: flex; flex-wrap: wrap; justify-content: center; padding: 16px 24px 0; font-size: 0.85rem; }
-    .site-nav a { color: var(--muted); text-decoration: none; margin: 0 8px; }
-    .site-nav a.active { color: var(--gold-text); font-weight: 600; }
-    .site-nav .sep { color: #c7c7cc; }
-
-    .lang-switch { display: flex; justify-content: center; gap: 8px; padding: 10px 24px 0; }
-    .lang-switch a {
-      font-size: 0.85rem; font-weight: 600; text-decoration: none;
-      color: var(--muted); padding: 6px 14px; border-radius: 999px; background: #fff;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06);
-    }
-    .lang-switch a.active { color: #fff; background: var(--gold-text); }
-
-    .hero {
-      background: #ffffff;
-      color: var(--ink);
-      text-align: center;
-      padding: 56px 24px 72px;
-      border-bottom: 1px solid #ececec;
-    }
-    .hero img { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.12); margin-bottom: 20px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; color: var(--ink); }
-    .hero .tagline { font-size: 1.15rem; font-weight: 500; color: var(--muted); max-width: 480px; margin: 0 auto 28px; }
-    .hero .badge-note { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; }
-    .hero .badge-note img { width: auto; height: 52px; box-shadow: none; border-radius: 0; opacity: 0.7; margin-bottom: 0; }
-    .hero .badge-note span { font-size: 0.85rem; color: var(--gold-text); font-weight: 600; }
-
-    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
-
-    section { margin-bottom: 64px; }
-    section > h2 {
-      font-size: 1.6rem; font-weight: 700; margin-bottom: 8px;
-      display: flex; align-items: center; gap: 10px; justify-content: center; text-align: center;
-    }
-    section > .section-sub { text-align: center; color: var(--muted); font-size: 1rem; margin-bottom: 28px; }
-    .pro-badge {
-      font-size: 0.65rem; font-weight: 800; letter-spacing: 0.04em;
-      color: #fff; background: var(--gold-text); padding: 3px 8px; border-radius: 6px;
-    }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-    .card { background: #fff; border-radius: 16px; padding: 22px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
-    .card .emoji { font-size: 1.6rem; display: block; margin-bottom: 10px; }
-    .card h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 6px; }
-    .card p { color: var(--muted2); font-size: 0.93rem; }
-
-    .screens { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
-    .screen-shot { text-align: center; }
-    .screen-shot img {
-      width: 150px; border-radius: 22px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
-      display: block; margin-bottom: 8px;
-    }
-    .screen-shot span { font-size: 0.8rem; color: var(--muted); }
-
-    .platforms { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .platform-pill {
-      background: #fff; border-radius: 999px; padding: 12px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.06);
-      font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;
-    }
-
-    .privacy-box {
-      background: #fff; border-radius: 16px; padding: 28px 28px; text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06);
-    }
-    .privacy-box p { color: var(--muted2); font-size: 0.97rem; margin-bottom: 14px; }
-    .privacy-box a { color: var(--gold-text); font-weight: 600; text-decoration: none; }
-    .privacy-box a:hover { text-decoration: underline; }
-
-    .cta { text-align: center; }
-    .cta p.support-link { margin-top: 18px; font-size: 0.92rem; }
-    .cta p.support-link a { color: var(--gold-text); font-weight: 600; text-decoration: none; }
-
-    footer { text-align: center; padding: 24px; color: #86868b; font-size: 0.85rem; }
-    footer a { color: #86868b; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
 </head>
-<body>
-  <div class="site-nav">
-    <a href="./" class="active">Início</a><span class="sep">·</span>
-    <a href="sobre/">Sobre</a><span class="sep">·</span>
-    <a href="loja/">Loja</a><span class="sep">·</span>
-    <a href="suporte/">Suporte</a><span class="sep">·</span>
-    <a href="novidades/">Novidades</a><span class="sep">·</span>
-    <a href="termos/">Termos</a><span class="sep">·</span>
-    <a href="privacidade/">Privacidade</a>
-  </div>
-  <div class="lang-switch">
-    <a href="./" class="active">PT-BR</a>
-    <a href="#" onclick="return false;" title="Use o seletor de idioma dentro de cada seção">PT-PT</a>
-    <a href="#" onclick="return false;" title="Use o seletor de idioma dentro de cada seção">EN</a>
-  </div>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
 
-  <div class="hero">
-    <img src="assets/icons/hero-icon.png" alt="OAlquimista" width="104" height="104" />
-    <h1>OAlquimista — Seu Livro de Receitas Pessoal</h1>
-    <p class="tagline">Elegante, inteligente e sempre com você.</p>
-    <span class="badge-note">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Em breve na App Store" />
-      <span>Em breve na App Store</span>
-    </span>
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="/">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="/">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/sobre/">Sobre</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/loja/">Loja</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/suporte/">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/novidades/">Novidades</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="/loja/" aria-label="Loja">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-primary font-bold" href="/">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/sobre/">Sobre</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/loja/">Loja</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/suporte/">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/novidades/">Novidades</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/termos/">Termos</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="/privacidade/">Privacidade</a>
   </div>
+</header>
 
-  <div class="wrap">
-    <section>
-      <h2>O que você pode fazer</h2>
-      <p class="section-sub">Sem anúncios, sem assinatura, sem cadastro.</p>
-      <div class="grid">
-        <div class="card">
-          <span class="emoji">📖</span>
-          <h3>Catálogo completo</h3>
-          <p>Cadastre receitas com título, rendimento, tempo de preparo, dificuldade e notas pessoais. Organize por categorias e coleções, em grade ou lista.</p>
-        </div>
-        <div class="card">
-          <span class="emoji">🔍</span>
-          <h3>Busca inteligente</h3>
-          <p>Encontre qualquer receita por nome, ingrediente, tag ou categoria. Filtre por dificuldade, tempo ou favoritos.</p>
-        </div>
-        <div class="card">
-          <span class="emoji">👨‍🍳</span>
-          <h3>Modo Cozinha</h3>
-          <p>Passo a passo em tela cheia, sempre com a tela ativa. Timer integrado por etapa e ajuste de porções em tempo real.</p>
-        </div>
-        <div class="card">
-          <span class="emoji">📲</span>
-          <h3>Importação inteligente</h3>
-          <p>Importe receitas de sites, PDFs, câmera ou texto livre com Apple Intelligence. A IA extrai ingredientes e passos automaticamente.</p>
-        </div>
-        <div class="card">
-          <span class="emoji">🛒</span>
-          <h3>Lista de compras</h3>
-          <p>Transforme ingredientes de qualquer receita em lista de compras com um toque. Marque o que já comprou e compartilhe com a família.</p>
-        </div>
-        <div class="card">
-          <span class="emoji">🗓</span>
-          <h3>Planejador de refeições</h3>
-          <p>Monte seu cardápio semanal, gere a lista de compras da semana e exporte para o Calendário do iPhone.</p>
+<main class="pt-20">
+  <!-- Hero -->
+  <section class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-margin-mobile overflow-hidden">
+    <div class="reveal-section max-w-4xl mx-auto space-y-stack-lg">
+      <div class="w-32 h-32 md:w-48 md:h-48 mx-auto relative group">
+        <div class="absolute inset-0 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-colors duration-700"></div>
+        <img alt="OAlquimista" class="relative z-10 w-full h-full object-contain filter drop-shadow-2xl" id="hero-logo" src="/assets/icons/hero-icon.png" width="192" height="192" />
+      </div>
+      <div class="space-y-stack-sm">
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">OAlquimista — Seu Livro de Receitas Pessoal</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elegante, inteligente e sempre com você.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md pt-stack-md">
+        <div class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full flex items-center gap-3 shadow-xl select-none">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">apps</span>
+          <div class="text-left">
+            <p class="text-[10px] leading-none uppercase tracking-widest font-semibold opacity-70">Em breve na</p>
+            <p class="text-xl font-bold leading-none">App Store</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Capturas de tela</h2>
-      <div class="screens">
-        <div class="screen-shot">
-          <img src="assets/screenshots/catalogo.jpg" alt="Catálogo de receitas no OAlquimista" width="150" height="326" loading="lazy" />
-          <span>Catálogo de receitas</span>
+  <!-- Features -->
+  <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-bright">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal-section">
+        <span class="text-primary font-label-md tracking-[0.2em] uppercase">Sem anúncios, sem assinatura, sem cadastro</span>
+        <h2 class="font-headline-md text-headline-md mt-4">O que você pode fazer</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section">
+          <span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Catálogo completo</h3>
+            <p class="font-body-md text-on-surface-variant">Cadastre receitas com título, rendimento, tempo de preparo, dificuldade e notas pessoais. Organize por categorias e coleções, em grade ou lista.</p>
+          </div>
         </div>
-        <div class="screen-shot">
-          <img src="assets/screenshots/modo-cozinha.jpg" alt="Modo Cozinha passo a passo no OAlquimista" width="150" height="326" loading="lazy" />
-          <span>Modo Cozinha</span>
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section" style="transition-delay: 100ms">
+          <span class="material-symbols-outlined text-4xl text-primary">search</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Busca inteligente</h3>
+            <p class="font-body-md text-on-surface-variant">Encontre qualquer receita por nome, ingrediente, tag ou categoria. Filtre por dificuldade, tempo ou favoritos.</p>
+          </div>
         </div>
-        <div class="screen-shot">
-          <img src="assets/screenshots/importacao.jpg" alt="Importação inteligente de receitas no OAlquimista" width="150" height="326" loading="lazy" />
-          <span>Importação inteligente</span>
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section" style="transition-delay: 200ms">
+          <span class="material-symbols-outlined text-4xl text-primary">skillet</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Modo Cozinha</h3>
+            <p class="font-body-md text-on-surface-variant">Passo a passo em tela cheia, sempre com a tela ativa. Timer integrado por etapa e ajuste de porções em tempo real.</p>
+          </div>
         </div>
-        <div class="screen-shot">
-          <img src="assets/screenshots/planejador.jpg" alt="Planejador de refeições no OAlquimista" width="150" height="326" loading="lazy" />
-          <span>Planejador de refeições</span>
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section" style="transition-delay: 300ms">
+          <span class="material-symbols-outlined text-4xl text-primary">cloud_download</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Importação inteligente</h3>
+            <p class="font-body-md text-on-surface-variant">Importe receitas de sites, PDFs, câmera ou texto livre com Apple Intelligence. A IA extrai ingredientes e passos automaticamente.</p>
+          </div>
+        </div>
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section" style="transition-delay: 400ms">
+          <span class="material-symbols-outlined text-4xl text-primary">shopping_cart</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Lista de compras</h3>
+            <p class="font-body-md text-on-surface-variant">Transforme ingredientes de qualquer receita em lista de compras com um toque. Marque o que já comprou e compartilhe com a família.</p>
+          </div>
+        </div>
+        <div class="glass-card p-10 rounded-xl flex flex-col justify-between min-h-[240px] reveal-section" style="transition-delay: 500ms">
+          <span class="material-symbols-outlined text-4xl text-primary">calendar_today</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Planejador de refeições</h3>
+            <p class="font-body-md text-on-surface-variant">Monte seu cardápio semanal, gere a lista de compras da semana e exporte para o Calendário do iPhone.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Em todo o ecossistema Apple</h2>
-      <p class="section-sub">Suas receitas sincronizadas via iCloud em todos os seus dispositivos.</p>
-      <div class="platforms">
-        <div class="platform-pill">📱 iPhone</div>
-        <div class="platform-pill">📱 iPad</div>
-        <div class="platform-pill">💻 Mac</div>
+  <!-- Screenshots -->
+  <section class="py-stack-lg bg-surface-white overflow-hidden">
+    <div class="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="text-center mb-16 reveal-section">
+        <span class="text-primary font-label-md tracking-[0.2em] uppercase">Interface</span>
+        <h2 class="font-headline-md text-headline-md mt-4">Capturas de tela</h2>
       </div>
-    </section>
-
-    <section>
-      <h2>Privacidade em primeiro lugar</h2>
-      <div class="privacy-box">
-        <p>Suas receitas ficam armazenadas localmente e sincronizadas apenas via iCloud privado. Sem cadastro, sem servidor próprio, sem anúncios, sem venda de dados.</p>
-        <a href="privacidade/">Ver Política de Privacidade completa →</a>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter reveal-section">
+        <div class="text-center">
+          <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
+            <img alt="Catálogo de receitas no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/catalogo.jpg" width="150" height="326" loading="lazy" />
+          </div>
+          <span class="text-label-sm text-grey-text">Catálogo de receitas</span>
+        </div>
+        <div class="text-center md:mt-12">
+          <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
+            <img alt="Modo Cozinha passo a passo no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/modo-cozinha.jpg" width="150" height="326" loading="lazy" />
+          </div>
+          <span class="text-label-sm text-grey-text">Modo Cozinha</span>
+        </div>
+        <div class="text-center">
+          <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
+            <img alt="Importação inteligente de receitas no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/importacao.jpg" width="150" height="326" loading="lazy" />
+          </div>
+          <span class="text-label-sm text-grey-text">Importação inteligente</span>
+        </div>
+        <div class="text-center md:mt-12">
+          <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-700 mb-3">
+            <img alt="Planejador de refeições no OAlquimista" class="w-full h-auto object-cover" src="/assets/screenshots/planejador.jpg" width="150" height="326" loading="lazy" />
+          </div>
+          <span class="text-label-sm text-grey-text">Planejador de refeições</span>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta">
-      <h2>Pronto pra começar?</h2>
-      <p class="section-sub">OAlquimista chega em breve à App Store.</p>
-      <p class="support-link"><a href="suporte/">Precisa de ajuda? Central de Suporte →</a></p>
-    </section>
+  <!-- Ecosystem -->
+  <section class="py-stack-lg px-margin-mobile md:px-margin-desktop text-center bg-surface-dim/20">
+    <div class="reveal-section max-w-3xl mx-auto">
+      <div class="flex justify-center gap-stack-lg mb-stack-lg">
+        <span class="material-symbols-outlined text-6xl text-primary/40">smartphone</span>
+        <span class="material-symbols-outlined text-6xl text-primary/40">tablet_mac</span>
+        <span class="material-symbols-outlined text-6xl text-primary/40">laptop_mac</span>
+      </div>
+      <h2 class="font-headline-md text-headline-md mb-stack-md text-primary">Em todo o ecossistema Apple</h2>
+      <p class="font-body-lg text-on-surface-variant">Suas receitas sincronizadas via iCloud em todos os seus dispositivos.</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <span class="glass-card px-6 py-2 rounded-full font-label-md text-label-md">📱 iPhone</span>
+        <span class="glass-card px-6 py-2 rounded-full font-label-md text-label-md">📱 iPad</span>
+        <span class="glass-card px-6 py-2 rounded-full font-label-md text-label-md">💻 Mac</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="py-stack-lg px-margin-mobile md:px-margin-desktop text-center">
+    <div class="reveal-section glass-card max-w-4xl mx-auto p-12 rounded-xl">
+      <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
+      <h2 class="font-headline-md text-headline-md mb-4">Privacidade em primeiro lugar</h2>
+      <p class="font-body-md text-on-surface-variant mb-8">Suas receitas ficam armazenadas localmente e sincronizadas apenas via iCloud privado. Sem cadastro, sem servidor próprio, sem anúncios, sem venda de dados.</p>
+      <a class="text-primary font-label-md uppercase tracking-widest hover:underline underline-offset-8" href="/privacidade/">Ver Política de Privacidade completa →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-stack-lg text-center reveal-section">
+    <div class="px-margin-mobile">
+      <h3 class="font-headline-sm text-headline-sm mb-6">Pronto pra começar?</h3>
+      <p class="font-body-md text-on-surface-variant mb-6">OAlquimista chega em breve à App Store.</p>
+      <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-2xl hover:scale-105 active:scale-95 transition-all" href="/suporte/">
+        Precisa de ajuda? Central de Suporte
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">Seu livro de receitas pessoal — elegante, inteligente e sempre com você.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explorar</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/sobre/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/loja/">Loja</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/novidades/">Novidades</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Suporte</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/suporte/">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/termos/">Termos de Uso</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="/privacidade/">Política de Privacidade</a>
+    </div>
   </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="/">oalquimista.store</a></p>
+  </div>
+</footer>
 
-  <footer>
-    <p>OAlquimista — <a href="./">oalquimista.store</a></p>
-  </footer>
+<script src="/assets/js/theme.js" defer></script>
+<script defer>
+  // Subtle hero-logo tilt on mouse move — purely decorative, guarded by prefers-reduced-motion.
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const heroLogo = document.getElementById("hero-logo");
+    if (!heroLogo) return;
+    heroLogo.addEventListener("mousemove", (e) => {
+      const rect = heroLogo.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const rotateX = (y - rect.height / 2) / 10;
+      const rotateY = (rect.width / 2 - x) / 10;
+      heroLogo.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+    heroLogo.addEventListener("mouseleave", () => {
+      heroLogo.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+    });
+  });
+</script>
 </body>
 </html>
