@@ -5,7 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OAlquimista — Seu livro de receitas pessoal</title>
   <meta name="description" content="OAlquimista: catálogo de receitas, Modo Cozinha com timers, importação inteligente com Apple Intelligence, lista de compras e planejador de refeições. Sem anúncios, sem assinatura." />
-  <link rel="icon" href="/icon.png" type="image/png" />
+  <link rel="canonical" href="https://oalquimista.store/" />
+  <link rel="icon" href="/assets/icons/favicon-32.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OAlquimista" />
+  <meta property="og:title" content="OAlquimista — Seu livro de receitas pessoal" />
+  <meta property="og:description" content="Catálogo de receitas, Modo Cozinha com timers, importação inteligente com Apple Intelligence, lista de compras e planejador de refeições. Sem anúncios, sem assinatura." />
+  <meta property="og:url" content="https://oalquimista.store/" />
+  <meta property="og:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="OAlquimista — Seu livro de receitas pessoal" />
+  <meta name="twitter:description" content="Catálogo de receitas, Modo Cozinha com timers, importação inteligente, lista de compras e planejador de refeições. Sem anúncios, sem assinatura." />
+  <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OAlquimista",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS, iPadOS, macOS",
+    "url": "https://oalquimista.store/",
+    "description": "Livro de receitas pessoal com catálogo de receitas, Modo Cozinha com timers, importação inteligente e planejador de refeições. Sem anúncios, sem assinatura, sem cadastro.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    }
+  }
+  </script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -71,12 +101,12 @@
     .card p { color: var(--muted2); font-size: 0.93rem; }
 
     .screens { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
-    .screen-placeholder {
-      width: 150px; height: 300px; border-radius: 22px; background: #fff;
-      box-shadow: 0 1px 3px rgba(0,0,0,.06); display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 0.8rem; text-align: center; padding: 12px;
-      border: 1px dashed #d0d0d5;
+    .screen-shot { text-align: center; }
+    .screen-shot img {
+      width: 150px; border-radius: 22px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+      display: block; margin-bottom: 8px;
     }
+    .screen-shot span { font-size: 0.8rem; color: var(--muted); }
 
     .platforms { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
     .platform-pill {
@@ -117,9 +147,9 @@
   </div>
 
   <div class="hero">
-    <img src="icon.png" alt="OAlquimista" />
-    <h1>OAlquimista</h1>
-    <p class="tagline">Seu livro de receitas pessoal — elegante, inteligente e sempre com você.</p>
+    <img src="assets/icons/hero-icon.png" alt="OAlquimista" width="104" height="104" />
+    <h1>OAlquimista — Seu Livro de Receitas Pessoal</h1>
+    <p class="tagline">Elegante, inteligente e sempre com você.</p>
     <span class="badge-note">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Em breve na App Store" />
       <span>Em breve na App Store</span>
@@ -166,12 +196,23 @@
 
     <section>
       <h2>Capturas de tela</h2>
-      <p class="section-sub">Em breve — screenshots do app chegando aqui.</p>
       <div class="screens">
-        <div class="screen-placeholder">Catálogo de receitas</div>
-        <div class="screen-placeholder">Modo Cozinha</div>
-        <div class="screen-placeholder">Importação inteligente</div>
-        <div class="screen-placeholder">Planejador de refeições</div>
+        <div class="screen-shot">
+          <img src="assets/screenshots/catalogo.jpg" alt="Catálogo de receitas no OAlquimista" width="150" height="326" loading="lazy" />
+          <span>Catálogo de receitas</span>
+        </div>
+        <div class="screen-shot">
+          <img src="assets/screenshots/modo-cozinha.jpg" alt="Modo Cozinha passo a passo no OAlquimista" width="150" height="326" loading="lazy" />
+          <span>Modo Cozinha</span>
+        </div>
+        <div class="screen-shot">
+          <img src="assets/screenshots/importacao.jpg" alt="Importação inteligente de receitas no OAlquimista" width="150" height="326" loading="lazy" />
+          <span>Importação inteligente</span>
+        </div>
+        <div class="screen-shot">
+          <img src="assets/screenshots/planejador.jpg" alt="Planejador de refeições no OAlquimista" width="150" height="326" loading="lazy" />
+          <span>Planejador de refeições</span>
+        </div>
       </div>
     </section>
 
