@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html class="scroll-smooth" lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,81 +23,147 @@
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
   <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="../style.css" />
   <title>OAlquimista — Termos de Utilização</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="site-nav">
-      <a href="../../">Início</a><span class="sep">·</span>
-      <a href="../../sobre/pt-pt/">Sobre</a><span class="sep">·</span>
-      <a href="../../loja/">Loja</a><span class="sep">·</span>
-      <a href="../../suporte/pt-pt/">Suporte</a><span class="sep">·</span>
-      <a href="../../novidades/pt-pt/">Novidades</a><span class="sep">·</span>
-      <a href="./" class="active">Termos</a><span class="sep">·</span>
-      <a href="../../privacidade/pt-pt/">Privacidade</a>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
+
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../sobre/pt-pt/">Sobre</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../loja/">Loja</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../suporte/pt-pt/">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../novidades/pt-pt/">Novidades</a>
+      </div>
     </div>
-    <div class="lang-switch">
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="../../loja/" aria-label="Loja">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../sobre/pt-pt/">Sobre</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../loja/">Loja</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../suporte/pt-pt/">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../novidades/pt-pt/">Novidades</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">Termos</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../privacidade/pt-pt/">Privacidade</a>
+  </div>
+</header>
+
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop">
+  <header class="max-w-3xl mx-auto text-center mb-stack-lg reveal-section">
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-3">Termos de Utilização do OAlquimista</h1>
+    <p class="text-label-sm text-grey-text uppercase tracking-wider mb-4">Em vigor desde: 16 de julho de 2026</p>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">Ao transferir, instalar ou usar o OAlquimista, concorda com estes Termos de Utilização. Se não concordar, não utilize a aplicação.</p>
+    <div class="lang-switch mt-6">
       <a href="../">PT-BR</a>
-      <a href="./" class="active">PT-PT</a>
+      <a class="active" href="./">PT-PT</a>
       <a href="../en/">EN</a>
     </div>
+  </header>
 
-    <header class="page-header">
-      <h1>Termos de Utilização do OAlquimista</h1>
-      <p class="effective">Em vigor desde: 16 de julho de 2026</p>
-      <p class="intro">Ao transferir, instalar ou usar o OAlquimista, concorda com estes Termos de Utilização. Se não concordar, não utilize a aplicação.</p>
-    </header>
+  <article class="glass-card max-w-3xl mx-auto p-8 md:p-12 rounded-xl reveal-section space-y-8">
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">1. Licença de utilização</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Concedemos-lhe uma licença limitada, pessoal, não exclusiva e intransmissível para usar o OAlquimista em qualquer dispositivo Apple que possua ou controle, em conformidade com as Regras de Utilização da App Store da Apple. A aplicação é licenciada, não vendida.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">2. Compras dentro da aplicação</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Na versão atual, o OAlquimista é gratuito e não tem compras dentro da aplicação. Caso funcionalidades pagas sejam adicionadas no futuro, todas as compras serão processadas integralmente pela Apple através da sua conta na App Store; não teremos acesso aos seus dados de pagamento. Pedidos de reembolso devem ser feitos diretamente à Apple, em <a class="text-primary hover:underline" href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">3. Utilização aceitável</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Concorda em não fazer engenharia inversa, descompilar ou desmontar a aplicação, exceto quando expressamente permitido por lei, e em não usar o OAlquimista para qualquer finalidade ilegal.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">4. Os seus dados e conteúdo</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">As receitas, fotografias, categorias e listas que cria pertencem-lhe. Ficam armazenadas localmente no seu dispositivo e são sincronizadas apenas através do seu iCloud privado. Consulte a nossa <a class="text-primary hover:underline" href="../../privacidade/pt-pt/">Política de Privacidade</a> para detalhes completos sobre o que recolhemos (praticamente nada).</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">5. Ausência de garantia</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">O OAlquimista é fornecido "tal como está" e "conforme disponível", sem garantias de qualquer tipo, na máxima extensão permitida por lei. Não garantimos que a aplicação esteja livre de erros ou funcione ininterruptamente, incluindo as funcionalidades de importação e reconhecimento de texto baseadas em Apple Intelligence.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">6. Limitação de responsabilidade</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Na máxima extensão permitida por lei, não seremos responsáveis por danos indiretos, incidentais ou consequenciais decorrentes do uso ou da impossibilidade de uso do OAlquimista.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">7. Reclamações sobre o produto</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Somos os únicos responsáveis pelo OAlquimista e pelo seu conteúdo. Qualquer reclamação sua ou de terceiros relacionada com a aplicação — incluindo responsabilidade por produto, conformidade com exigências legais ou regulatórias, ou proteção do consumidor — deve ser dirigida a nós, e não à Apple.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">8. Propriedade intelectual de terceiros</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Somos responsáveis pela investigação, defesa e resolução de qualquer reclamação de terceiros de que o OAlquimista ou o seu uso viola direitos de propriedade intelectual de terceiros.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">9. Conformidade legal</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Ao usar o OAlquimista, declara não estar localizado num país sujeito a embargo do governo dos EUA e não constar em nenhuma lista de partes proibidas ou restritas.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">10. Cessação</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Pode deixar de usar o OAlquimista a qualquer momento, eliminando a aplicação do seu dispositivo. Podemos descontinuar a aplicação ou funcionalidades específicas mediante aviso razoável.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">11. Alterações a estes termos</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Podemos atualizar estes termos ocasionalmente. A data no topo desta página será sempre atualizada quando isso acontecer.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">12. Lei aplicável</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Estes termos são regidos pelas leis aplicáveis no seu país de residência, sem prejuízo dos direitos obrigatórios de proteção do consumidor previstos na lei local.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">13. Beneficiários terceiros</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Reconhece que este acordo é celebrado entre si e o programador do OAlquimista, não com a Apple, e que a Apple não é responsável pela aplicação ou pelo seu conteúdo. A Apple e as suas subsidiárias são terceiras beneficiárias destes termos e, mediante a sua aceitação, a Apple terá o direito de fazer cumprir estes termos contra si como terceira beneficiária.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">14. Contacto</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Dúvidas sobre estes termos podem ser enviadas para <a class="text-primary hover:underline" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>.</p>
+    </section>
+  </article>
 
-    <article>
-      <h2>1. Licença de utilização</h2>
-      <p>Concedemos-lhe uma licença limitada, pessoal, não exclusiva e intransmissível para usar o OAlquimista em qualquer dispositivo Apple que possua ou controle, em conformidade com as Regras de Utilização da App Store da Apple. A aplicação é licenciada, não vendida.</p>
+  <p class="text-center mt-stack-lg reveal-section"><a class="text-primary font-label-md hover:underline" href="../../suporte/pt-pt/">← Voltar à Central de Suporte</a></p>
+</main>
 
-      <h2>2. Compras dentro da aplicação</h2>
-      <p>Na versão atual, o OAlquimista é gratuito e não tem compras dentro da aplicação. Caso funcionalidades pagas sejam adicionadas no futuro, todas as compras serão processadas integralmente pela Apple através da sua conta na App Store; não teremos acesso aos seus dados de pagamento. Pedidos de reembolso devem ser feitos diretamente à Apple, em <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
-
-      <h2>3. Utilização aceitável</h2>
-      <p>Concorda em não fazer engenharia inversa, descompilar ou desmontar a aplicação, exceto quando expressamente permitido por lei, e em não usar o OAlquimista para qualquer finalidade ilegal.</p>
-
-      <h2>4. Os seus dados e conteúdo</h2>
-      <p>As receitas, fotografias, categorias e listas que cria pertencem-lhe. Ficam armazenadas localmente no seu dispositivo e são sincronizadas apenas através do seu iCloud privado. Consulte a nossa <a href="../../privacidade/pt-pt/">Política de Privacidade</a> para detalhes completos sobre o que recolhemos (praticamente nada).</p>
-
-      <h2>5. Ausência de garantia</h2>
-      <p>O OAlquimista é fornecido "tal como está" e "conforme disponível", sem garantias de qualquer tipo, na máxima extensão permitida por lei. Não garantimos que a aplicação esteja livre de erros ou funcione ininterruptamente, incluindo as funcionalidades de importação e reconhecimento de texto baseadas em Apple Intelligence.</p>
-
-      <h2>6. Limitação de responsabilidade</h2>
-      <p>Na máxima extensão permitida por lei, não seremos responsáveis por danos indiretos, incidentais ou consequenciais decorrentes do uso ou da impossibilidade de uso do OAlquimista.</p>
-
-      <h2>7. Reclamações sobre o produto</h2>
-      <p>Somos os únicos responsáveis pelo OAlquimista e pelo seu conteúdo. Qualquer reclamação sua ou de terceiros relacionada com a aplicação — incluindo responsabilidade por produto, conformidade com exigências legais ou regulatórias, ou proteção do consumidor — deve ser dirigida a nós, e não à Apple.</p>
-
-      <h2>8. Propriedade intelectual de terceiros</h2>
-      <p>Somos responsáveis pela investigação, defesa e resolução de qualquer reclamação de terceiros de que o OAlquimista ou o seu uso viola direitos de propriedade intelectual de terceiros.</p>
-
-      <h2>9. Conformidade legal</h2>
-      <p>Ao usar o OAlquimista, declara não estar localizado num país sujeito a embargo do governo dos EUA e não constar em nenhuma lista de partes proibidas ou restritas.</p>
-
-      <h2>10. Cessação</h2>
-      <p>Pode deixar de usar o OAlquimista a qualquer momento, eliminando a aplicação do seu dispositivo. Podemos descontinuar a aplicação ou funcionalidades específicas mediante aviso razoável.</p>
-
-      <h2>11. Alterações a estes termos</h2>
-      <p>Podemos atualizar estes termos ocasionalmente. A data no topo desta página será sempre atualizada quando isso acontecer.</p>
-
-      <h2>12. Lei aplicável</h2>
-      <p>Estes termos são regidos pelas leis aplicáveis no seu país de residência, sem prejuízo dos direitos obrigatórios de proteção do consumidor previstos na lei local.</p>
-
-      <h2>13. Beneficiários terceiros</h2>
-      <p>Reconhece que este acordo é celebrado entre si e o programador do OAlquimista, não com a Apple, e que a Apple não é responsável pela aplicação ou pelo seu conteúdo. A Apple e as suas subsidiárias são terceiras beneficiárias destes termos e, mediante a sua aceitação, a Apple terá o direito de fazer cumprir estes termos contra si como terceira beneficiária.</p>
-
-      <h2>14. Contacto</h2>
-      <p>Dúvidas sobre estes termos podem ser enviadas para <a href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>.</p>
-    </article>
-
-    <p class="back-link"><a href="../../suporte/pt-pt/">← Voltar à Central de Suporte</a></p>
-
-    <footer>
-      <p>OAlquimista — <a href="../../">oalquimista.store</a></p>
-    </footer>
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">O seu livro de receitas pessoal — elegante, inteligente e sempre consigo.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explorar</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../">Início</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../sobre/pt-pt/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../loja/">Loja</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Suporte</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../suporte/pt-pt/">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-primary font-semibold" href="./">Termos de Utilização</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../privacidade/pt-pt/">Política de Privacidade</a>
+    </div>
   </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../../">oalquimista.store</a></p>
+  </div>
+</footer>
+
+<script src="../../assets/js/theme.js" defer></script>
 </body>
 </html>

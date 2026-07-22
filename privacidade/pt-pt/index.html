@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html class="scroll-smooth" lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,72 +24,134 @@
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
   <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="../style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="site-nav">
-      <a href="../../">Início</a><span class="sep">·</span>
-      <a href="../../sobre/pt-pt/">Sobre</a><span class="sep">·</span>
-      <a href="../../loja/">Loja</a><span class="sep">·</span>
-      <a href="../../suporte/pt-pt/">Suporte</a><span class="sep">·</span>
-      <a href="../../novidades/pt-pt/">Novidades</a><span class="sep">·</span>
-      <a href="../../termos/pt-pt/">Termos</a><span class="sep">·</span>
-      <a href="./" class="active">Privacidade</a>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
+
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../sobre/pt-pt/">Sobre</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../loja/">Loja</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../suporte/pt-pt/">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../novidades/pt-pt/">Novidades</a>
+      </div>
     </div>
-    <div class="lang-switch">
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="../../loja/" aria-label="Loja">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../sobre/pt-pt/">Sobre</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../loja/">Loja</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../suporte/pt-pt/">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../novidades/pt-pt/">Novidades</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../termos/pt-pt/">Termos</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">Privacidade</a>
+  </div>
+</header>
+
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop">
+  <header class="max-w-3xl mx-auto text-center mb-stack-lg reveal-section">
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-3">Política de Privacidade do OAlquimista</h1>
+    <p class="text-label-sm text-grey-text uppercase tracking-wider mb-4">Em vigor desde: 16 de julho de 2026</p>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">O OAlquimista não recolhe, transmite nem vende dados pessoais a terceiros. Este aviso descreve exatamente o que fica no seu dispositivo e o que é sincronizado através do seu próprio iCloud.</p>
+    <div class="lang-switch mt-6">
       <a href="../">PT-BR</a>
-      <a href="./" class="active">PT-PT</a>
+      <a class="active" href="./">PT-PT</a>
       <a href="../en/">EN</a>
     </div>
+  </header>
 
-    <header class="page-header">
-      <h1>Política de Privacidade do OAlquimista</h1>
-      <p class="effective">Em vigor desde: 16 de julho de 2026</p>
-      <p class="intro">O OAlquimista não recolhe, transmite nem vende dados pessoais a terceiros. Este aviso descreve exatamente o que fica no seu dispositivo e o que é sincronizado através do seu próprio iCloud.</p>
-    </header>
+  <article class="glass-card max-w-3xl mx-auto p-8 md:p-12 rounded-xl reveal-section space-y-8">
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">O que recolhemos</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed mb-3">As funcionalidades gratuitas do OAlquimista — biblioteca de receitas, Modo Cozinha, planeador de refeições e lista de compras — não exigem registo nem recolhem dados pessoais identificáveis.</p>
+      <p class="text-body-md text-on-surface-variant leading-relaxed mb-3">O OAlquimista Plus (subscrição opcional) usa Sign in with Apple para validar o seu acesso. Recolhemos apenas o identificador anónimo que a Apple fornece nesse processo — nunca pedimos uma palavra-passe própria, e pode optar por não partilhar o seu nome ou e-mail real connosco através do recurso de e-mail privado da própria Apple.</p>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">As receitas que cria — incluindo título, ingredientes, passos, notas e fotografias — são conteúdo seu, armazenado localmente no seu dispositivo.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Como usamos essas informações</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Não usamos as suas receitas, fotografias ou notas para nenhuma finalidade além de as mostrar de volta dentro da app. Não existe análise de terceiros nem monitorização de comportamento.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Onde ficam os seus dados</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed mb-3">Todo o conteúdo que cria na app — receitas, fotografias, categorias, coleções, lista de compras e planeamento de refeições — fica armazenado localmente no seu dispositivo, usando o SwiftData do iOS.</p>
+      <p class="text-body-md text-on-surface-variant leading-relaxed mb-3">Opcionalmente, este conteúdo é sincronizado entre os seus próprios dispositivos (iPhone, iPad e Mac) através do seu iCloud privado (CloudKit), associado à sua conta Apple ID e sujeito à Política de Privacidade da própria Apple. Nunca enviamos as suas receitas para servidores próprios ou de terceiros.</p>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Se subscrever o OAlquimista Plus, o seu identificador de conta e o estado da subscrição ficam num backend próprio, mínimo, usado exclusivamente para validar o seu acesso — nunca para guardar o conteúdo das suas receitas, que continua no seu iCloud pessoal.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Serviços de terceiros</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">O OAlquimista não usa SDKs de publicidade nem rastreadores de terceiros. Funcionalidades como importação de receitas por câmara, PDF ou texto usam processamento no próprio dispositivo através da Apple Intelligence — nenhum conteúdo é enviado para servidores externos nessa análise.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Publicidade</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">O OAlquimista não apresenta publicidade nem partilha dados com redes publicitárias.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Retenção de dados</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Além do identificador de conta e estado de subscrição de quem subscreve o OAlquimista Plus, não armazenamos cópias dos seus dados fora do seu dispositivo e do seu iCloud pessoal. Eliminar a app remove todos os dados armazenados localmente; eliminar a sua conta Plus (veja "Os seus direitos" abaixo) remove o restante.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Os seus direitos</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Se usa apenas as funcionalidades gratuitas, não existem dados pessoais seus para aceder, corrigir ou eliminar do nosso lado. Se subscrever o OAlquimista Plus, pode eliminar a sua conta e todos os dados associados a qualquer momento, diretamente na app — a eliminação é imediata e não exige contacto com o suporte, conforme as diretrizes da App Store para apps com conta.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Menores de idade</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">O OAlquimista não recolhe dados de nenhum utilizador, independentemente da idade. A app é adequada para todas as idades (classificação 4+ na App Store).</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Alterações a esta política</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Podemos atualizar esta política ocasionalmente. A data no topo desta página será sempre atualizada quando isso acontecer.</p>
+    </section>
+    <section>
+      <h2 class="font-headline-sm text-headline-sm text-primary mb-3">Contacto</h2>
+      <p class="text-body-md text-on-surface-variant leading-relaxed">Se tiver dúvidas sobre esta política ou sobre como tratamos as suas informações, contacte-nos em <a class="text-primary hover:underline" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>.</p>
+    </section>
+  </article>
 
-    <article>
-      <h2>O que recolhemos</h2>
-      <p>As funcionalidades gratuitas do OAlquimista — biblioteca de receitas, Modo Cozinha, planeador de refeições e lista de compras — não exigem registo nem recolhem dados pessoais identificáveis.</p>
-      <p>O OAlquimista Plus (subscrição opcional) usa Sign in with Apple para validar o seu acesso. Recolhemos apenas o identificador anónimo que a Apple fornece nesse processo — nunca pedimos uma palavra-passe própria, e pode optar por não partilhar o seu nome ou e-mail real connosco através do recurso de e-mail privado da própria Apple.</p>
-      <p>As receitas que cria — incluindo título, ingredientes, passos, notas e fotografias — são conteúdo seu, armazenado localmente no seu dispositivo.</p>
+  <p class="text-center mt-stack-lg reveal-section"><a class="text-primary font-label-md hover:underline" href="../../suporte/pt-pt/">← Voltar à Central de Suporte</a></p>
+</main>
 
-      <h2>Como usamos essas informações</h2>
-      <p>Não usamos as suas receitas, fotografias ou notas para nenhuma finalidade além de as mostrar de volta dentro da app. Não existe análise de terceiros nem monitorização de comportamento.</p>
-
-      <h2>Onde ficam os seus dados</h2>
-      <p>Todo o conteúdo que cria na app — receitas, fotografias, categorias, coleções, lista de compras e planeamento de refeições — fica armazenado localmente no seu dispositivo, usando o SwiftData do iOS.</p>
-      <p>Opcionalmente, este conteúdo é sincronizado entre os seus próprios dispositivos (iPhone, iPad e Mac) através do seu iCloud privado (CloudKit), associado à sua conta Apple ID e sujeito à Política de Privacidade da própria Apple. Nunca enviamos as suas receitas para servidores próprios ou de terceiros.</p>
-      <p>Se subscrever o OAlquimista Plus, o seu identificador de conta e o estado da subscrição ficam num backend próprio, mínimo, usado exclusivamente para validar o seu acesso — nunca para guardar o conteúdo das suas receitas, que continua no seu iCloud pessoal.</p>
-
-      <h2>Serviços de terceiros</h2>
-      <p>O OAlquimista não usa SDKs de publicidade nem rastreadores de terceiros. Funcionalidades como importação de receitas por câmara, PDF ou texto usam processamento no próprio dispositivo através da Apple Intelligence — nenhum conteúdo é enviado para servidores externos nessa análise.</p>
-
-      <h2>Publicidade</h2>
-      <p>O OAlquimista não apresenta publicidade nem partilha dados com redes publicitárias.</p>
-
-      <h2>Retenção de dados</h2>
-      <p>Além do identificador de conta e estado de subscrição de quem subscreve o OAlquimista Plus, não armazenamos cópias dos seus dados fora do seu dispositivo e do seu iCloud pessoal. Eliminar a app remove todos os dados armazenados localmente; eliminar a sua conta Plus (veja "Os seus direitos" abaixo) remove o restante.</p>
-
-      <h2>Os seus direitos</h2>
-      <p>Se usa apenas as funcionalidades gratuitas, não existem dados pessoais seus para aceder, corrigir ou eliminar do nosso lado. Se subscrever o OAlquimista Plus, pode eliminar a sua conta e todos os dados associados a qualquer momento, diretamente na app — a eliminação é imediata e não exige contacto com o suporte, conforme as diretrizes da App Store para apps com conta.</p>
-
-      <h2>Menores de idade</h2>
-      <p>O OAlquimista não recolhe dados de nenhum utilizador, independentemente da idade. A app é adequada para todas as idades (classificação 4+ na App Store).</p>
-
-      <h2>Alterações a esta política</h2>
-      <p>Podemos atualizar esta política ocasionalmente. A data no topo desta página será sempre atualizada quando isso acontecer.</p>
-
-      <h2>Contacto</h2>
-      <p>Se tiver dúvidas sobre esta política ou sobre como tratamos as suas informações, contacte-nos em <a href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>.</p>
-    </article>
-
-    <p class="back-link"><a href="../../suporte/pt-pt/">← Voltar à Central de Suporte</a></p>
-
-    <footer>
-      <p>OAlquimista — <a href="../../">oalquimista.store</a></p>
-    </footer>
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">O seu livro de receitas pessoal — elegante, inteligente e sempre consigo.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explorar</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../">Início</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../sobre/pt-pt/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../loja/">Loja</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Suporte</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../suporte/pt-pt/">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../termos/pt-pt/">Termos de Utilização</a>
+      <a class="font-label-sm text-label-sm text-primary font-semibold" href="./">Política de Privacidade</a>
+    </div>
   </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../../">oalquimista.store</a></p>
+  </div>
+</footer>
+
+<script src="../../assets/js/theme.js" defer></script>
 </body>
 </html>

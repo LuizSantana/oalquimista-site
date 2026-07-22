@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html class="scroll-smooth" lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,85 +24,156 @@
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
   <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="../style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
 </head>
-<body>
-  <div class="site-nav">
-    <a href="../../">Home</a><span class="sep">·</span>
-    <a href="./" class="active">About</a><span class="sep">·</span>
-    <a href="../../loja/">Store</a><span class="sep">·</span>
-    <a href="../../suporte/en/">Support</a><span class="sep">·</span>
-    <a href="../../novidades/en/">What's New</a><span class="sep">·</span>
-    <a href="../../termos/en/">Terms</a><span class="sep">·</span>
-    <a href="../../privacidade/en/">Privacy</a>
-  </div>
-  <div class="lang-switch">
-    <a href="../">PT-BR</a>
-    <a href="../pt-pt/">PT-PT</a>
-    <a href="./" class="active">EN</a>
-  </div>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
 
-  <div class="hero">
-    <img src="../../assets/icons/hero-icon.png" alt="OAlquimista" />
-    <h1>About OAlquimista</h1>
-    <p class="tagline">The art of cooking, in the palm of your hand.</p>
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../">Home</a>
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="./">About</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../loja/">Store</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../suporte/en/">Support</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../novidades/en/">What's New</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="../../loja/" aria-label="Store">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../">Home</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">About</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../loja/">Store</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../suporte/en/">Support</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../novidades/en/">What's New</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../termos/en/">Terms</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../privacidade/en/">Privacy</a>
   </div>
+</header>
 
-  <div class="wrap">
-    <section>
-      <h2>Why OAlquimista exists</h2>
-      <div class="story">
+<main class="pt-32 pb-stack-lg">
+  <!-- Hero -->
+  <section class="px-margin-mobile md:px-margin-desktop text-center mb-stack-lg reveal-section">
+    <img alt="OAlquimista" class="w-20 h-20 mx-auto mb-6 rounded-2xl shadow-lg" src="../../assets/icons/hero-icon.png" width="80" height="80" />
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-3">About OAlquimista</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">The art of cooking, in the palm of your hand.</p>
+    <div class="lang-switch mt-6">
+      <a href="../">PT-BR</a>
+      <a href="../pt-pt/">PT-PT</a>
+      <a class="active" href="./">EN</a>
+    </div>
+  </section>
+
+  <!-- Origin -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <div class="max-w-3xl mx-auto reveal-section">
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-8 text-center">Why OAlquimista exists</h2>
+      <div class="space-y-6 text-on-surface-variant leading-relaxed font-body-lg glass-card p-10 rounded-xl">
         <p>OAlquimista was built for anyone tired of losing recipes in scattered photos and screenshots. It's your personal digital recipe book — elegant, intelligent, and completely yours.</p>
         <p>Organize, create, and explore recipes with the sophistication of a professional chef and the convenience of a modern app. From draft to table, OAlquimista is with you at every step: full recipe entries with photos and notes, search by ingredient or category, per-step timers in Cook Mode, one-tap shopping lists, and weekly meal planning.</p>
         <p>It's a great fit for home cooks looking for more organization, families planning weekly meals, and food enthusiasts who love exploring new ingredients.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>How it works</h2>
-      <p class="section-sub">A flow designed from draft to table</p>
-      <div class="grid">
-        <div class="card">
-          <span class="emoji">📖</span>
-          <h3>Add or import</h3>
-          <p>Type your recipe or import it from a website, PDF, photo, or free text with Apple Intelligence — the AI automatically extracts ingredients and steps.</p>
+  <!-- How it works -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg bg-surface-bright">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal-section">
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">How it works</h2>
+        <p class="text-on-surface-variant max-w-2xl mx-auto">A flow designed from draft to table</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="glass-card p-10 flex flex-col items-center text-center gap-6 reveal-section">
+          <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-3">Add or import</h3>
+            <p class="text-on-surface-variant leading-relaxed">Type your recipe or import it from a website, PDF, photo, or free text with Apple Intelligence — the AI automatically extracts ingredients and steps.</p>
+          </div>
         </div>
-        <div class="card">
-          <span class="emoji">👨‍🍳</span>
-          <h3>Cook with Cook Mode</h3>
-          <p>Follow the full-screen step-by-step, with a per-step timer and real-time serving adjustments — never lose your rhythm.</p>
+        <div class="glass-card p-10 flex flex-col items-center text-center gap-6 reveal-section" style="transition-delay: 100ms">
+          <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">skillet</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-3">Cook with Cook Mode</h3>
+            <p class="text-on-surface-variant leading-relaxed">Follow the full-screen step-by-step, with a per-step timer and real-time serving adjustments — never lose your rhythm.</p>
+          </div>
         </div>
-        <div class="card">
-          <span class="emoji">🗓</span>
-          <h3>Plan the week</h3>
-          <p>Build your menu and generate the week's shopping list in one tap, straight from the recipes you picked.</p>
+        <div class="glass-card p-10 flex flex-col items-center text-center gap-6 reveal-section" style="transition-delay: 200ms">
+          <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+          <div>
+            <h3 class="font-headline-sm text-headline-sm mb-3">Plan the week</h3>
+            <p class="text-on-surface-variant leading-relaxed">Build your menu and generate the week's shopping list in one tap, straight from the recipes you picked.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Built with Apple technology</h2>
-      <p class="section-sub">Native on every device, no reliance on third-party servers</p>
-      <ul class="stack-list">
-        <li>SwiftUI</li>
-        <li>SwiftData + CloudKit</li>
-        <li>Vision / VisionKit (OCR)</li>
-        <li>Apple Intelligence</li>
-        <li>WidgetKit</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Privacy first</h2>
-      <div class="privacy-box">
-        <p>Your recipes stay on your device, synced only through your private iCloud. No proprietary server, no ads.</p>
-        <a href="../../privacidade/en/">See full Privacy Policy →</a>
+  <!-- Tech stack -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <div class="max-w-4xl mx-auto text-center reveal-section">
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Built with Apple technology</h2>
+      <p class="text-on-surface-variant mb-10 max-w-2xl mx-auto">Native on every device, no reliance on third-party servers.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="glass-card px-6 py-3 rounded-full font-label-md">SwiftUI</span>
+        <span class="glass-card px-6 py-3 rounded-full font-label-md">SwiftData + CloudKit</span>
+        <span class="glass-card px-6 py-3 rounded-full font-label-md">Vision / VisionKit (OCR)</span>
+        <span class="glass-card px-6 py-3 rounded-full font-label-md">Apple Intelligence</span>
+        <span class="glass-card px-6 py-3 rounded-full font-label-md">WidgetKit</span>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg text-center">
+    <div class="reveal-section glass-card max-w-4xl mx-auto p-12 rounded-xl">
+      <span class="material-symbols-outlined text-5xl text-primary mb-6" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+      <h2 class="font-headline-md text-headline-md mb-4">Privacy first</h2>
+      <p class="font-body-md text-on-surface-variant mb-8">Your recipes stay on your device, synced only through your private iCloud. No proprietary server, no ads.</p>
+      <a class="text-primary font-label-md uppercase tracking-widest hover:underline underline-offset-8" href="../../privacidade/en/">See full Privacy Policy →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">Your personal recipe book — elegant, intelligent, always with you.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explore</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../">Home</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../loja/">Store</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../novidades/en/">What's New</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Support</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../suporte/en/">Support Center</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../termos/en/">Terms of Use</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../privacidade/en/">Privacy Policy</a>
+    </div>
   </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../../">oalquimista.store</a></p>
+  </div>
+</footer>
 
-  <footer>
-    <p>OAlquimista — <a href="../../">oalquimista.store</a></p>
-  </footer>
+<script src="../../assets/js/theme.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html class="scroll-smooth" lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,6 @@
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
   <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="../style.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,104 +80,203 @@
   ]
 }
   </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="site-nav">
-      <a href="../../">Início</a><span class="sep">·</span>
-      <a href="../../sobre/pt-pt/">Sobre</a><span class="sep">·</span>
-      <a href="../../loja/">Loja</a><span class="sep">·</span>
-      <a href="./" class="active">Suporte</a><span class="sep">·</span>
-      <a href="../../novidades/pt-pt/">Novidades</a><span class="sep">·</span>
-      <a href="../../termos/pt-pt/">Termos</a><span class="sep">·</span>
-      <a href="../../privacidade/pt-pt/">Privacidade</a>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
+
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../">Início</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../sobre/pt-pt/">Sobre</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../loja/">Loja</a>
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="./">Suporte</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../novidades/pt-pt/">Novidades</a>
+      </div>
     </div>
-    <div class="lang-switch">
-      <a href="../">PT-BR</a>
-      <a href="./" class="active">PT-PT</a>
-      <a href="../en/">EN</a>
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="../../loja/" aria-label="Loja">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
     </div>
-
-    <header class="page-header">
-      <img src="../../assets/icons/hero-icon.png" alt="OAlquimista" />
-      <h1>Central de Suporte</h1>
-      <p class="intro">Não encontrou o que precisa? <a href="mailto:suporte@oalquimista.store">Fale diretamente connosco →</a></p>
-    </header>
-
-    <section>
-      <h2><span class="dot"></span>Perguntas frequentes</h2>
-      <details class="faq">
-        <summary>O OAlquimista é gratuito?</summary>
-        <div class="answer">Sim — na versão atual, todas as funcionalidades (catálogo, Modo Cozinha, importação, lista de compras e planeador de refeições) são gratuitas.</div>
-      </details>
-      <details class="faq">
-        <summary>As minhas receitas ficam guardadas se mudar de telemóvel?</summary>
-        <div class="answer">Sim, desde que a sincronização iCloud esteja ativada. As suas receitas ficam no seu iCloud pessoal, não em servidores do OAlquimista.</div>
-      </details>
-      <details class="faq">
-        <summary>Como funciona a importação inteligente?</summary>
-        <div class="answer">Cole a ligação de um site de receitas, use a câmara para digitalizar um livro, importe um PDF ou cole texto. O OAlquimista usa Apple Intelligence, no próprio dispositivo, para extrair ingredientes e passos automaticamente. Reveja sempre o resultado antes de guardar.</div>
-      </details>
-      <details class="faq">
-        <summary>A app funciona no iPad e no Mac?</summary>
-        <div class="answer">Sim, é universal para iPhone e iPad, e também funciona no Mac via Catalyst.</div>
-      </details>
-      <details class="faq">
-        <summary>Como elimino a minha conta e os meus dados?</summary>
-        <div class="answer">Se usa apenas as funcionalidades gratuitas, não existe conta para eliminar — os seus dados ficam só no seu dispositivo (e no seu iCloud pessoal, se a sincronização estiver ativada). Para apagar tudo, remova a app: toque sem soltar no ícone e escolha "Remover App". Se subscrever o OAlquimista Plus, pode eliminar a sua conta a qualquer momento diretamente na app, em Definições — isto remove o seu registo do nosso lado imediatamente, sem precisar de contactar o suporte.</div>
-      </details>
-      <details class="faq">
-        <summary>Encontrei um erro. Como reporto?</summary>
-        <div class="answer">Envie para <a href="mailto:suporte@oalquimista.store?subject=Bug%20Report">suporte@oalquimista.store</a> com o assunto "Bug Report", incluindo o modelo do aparelho e a versão do iOS.</div>
-      </details>
-    </section>
-
-    <section>
-      <h2><span class="dot"></span>Guia rápido</h2>
-      <div class="card">
-        <h3><span class="emoji">📖</span>Catálogo de receitas</h3>
-        <p>Toque em "+" para registar uma receita manualmente, ou use a importação inteligente.</p>
-      </div>
-      <div class="card">
-        <h3><span class="emoji">👨‍🍳</span>Modo Cozinha</h3>
-        <p>Abra uma receita e toque em "Cozinhar" para o passo a passo em ecrã inteiro, com temporizador por etapa.</p>
-      </div>
-      <div class="card">
-        <h3><span class="emoji">🛒</span>Lista de compras</h3>
-        <p>Na receita, toque em "Adicionar à lista de compras". Marque os itens conforme vai comprando.</p>
-      </div>
-      <div class="card">
-        <h3><span class="emoji">🗓</span>Planeador de refeições</h3>
-        <p>No separador Planeador, toque num dia para adicionar uma refeição e gere a lista de compras da semana.</p>
-      </div>
-    </section>
-
-    <section id="privacidade">
-      <h2><span class="dot"></span>Privacidade</h2>
-      <div class="privacy-item">
-        <p style="margin-top:10px;"><a href="../../privacidade/pt-pt/" style="color:#8B7200; font-weight:600;">Ver Política de Privacidade →</a></p>
-      </div>
-    </section>
-
-    <section>
-      <h2><span class="dot"></span>Contacto</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>✉️ Suporte geral</h3>
-          <a class="email" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
-          <p>Respondemos em até 48 horas úteis.</p>
-        </div>
-        <div class="contact-card">
-          <h3>🐛 Reportar erro</h3>
-          <a class="email" href="mailto:suporte@oalquimista.store?subject=Bug%20Report">suporte@oalquimista.store</a>
-          <p>Assunto: Bug Report.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>OAlquimista — <a href="../../">oalquimista.store</a></p>
-    </footer>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../">Início</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../sobre/pt-pt/">Sobre</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../loja/">Loja</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">Suporte</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../novidades/pt-pt/">Novidades</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../termos/pt-pt/">Termos</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../privacidade/pt-pt/">Privacidade</a>
   </div>
+</header>
+
+<main class="pt-32 pb-stack-lg">
+  <!-- Hero -->
+  <section class="px-margin-mobile md:px-margin-desktop mb-stack-lg reveal-section">
+    <div class="max-w-3xl">
+      <img alt="OAlquimista" class="w-16 h-16 mb-6 rounded-2xl shadow-lg" src="../../assets/icons/hero-icon.png" width="64" height="64" />
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-ink mb-4">Central de Suporte</h1>
+      <p class="font-body-lg text-body-lg text-grey-text">Não encontrou o que precisa? <a class="text-primary font-semibold hover:underline" href="mailto:suporte@oalquimista.store">Fale diretamente connosco →</a></p>
+      <div class="lang-switch mt-6 justify-start">
+        <a href="../">PT-BR</a>
+        <a class="active" href="./">PT-PT</a>
+        <a href="../en/">EN</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg bg-surface-container-low/50">
+    <div class="max-w-4xl mx-auto reveal-section">
+      <h2 class="font-headline-md text-headline-md text-ink mb-stack-lg text-center">Perguntas frequentes</h2>
+      <div class="space-y-3">
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">O OAlquimista é gratuito?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Sim — na versão atual, todas as funcionalidades (catálogo, Modo Cozinha, importação, lista de compras e planeador de refeições) são gratuitas.
+          </div>
+        </div>
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">As minhas receitas ficam guardadas se mudar de telemóvel?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Sim, desde que a sincronização iCloud esteja ativada. As suas receitas ficam no seu iCloud pessoal, não em servidores do OAlquimista.
+          </div>
+        </div>
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">Como funciona a importação inteligente?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Cole a ligação de um site de receitas, use a câmara para digitalizar um livro, importe um PDF ou cole texto. O OAlquimista usa Apple Intelligence, no próprio dispositivo, para extrair ingredientes e passos automaticamente. Reveja sempre o resultado antes de guardar.
+          </div>
+        </div>
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">A app funciona no iPad e no Mac?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Sim, é universal para iPhone e iPad, e também funciona no Mac via Catalyst.
+          </div>
+        </div>
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">Como elimino a minha conta e os meus dados?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Se usa apenas as funcionalidades gratuitas, não existe conta para eliminar — os seus dados ficam só no seu dispositivo (e no seu iCloud pessoal, se a sincronização estiver ativada). Para apagar tudo, remova a app: toque sem soltar no ícone e escolha "Remover App". Se subscrever o OAlquimista Plus, pode eliminar a sua conta a qualquer momento diretamente na app, em Definições — isto remove o seu registo do nosso lado imediatamente, sem precisar de contactar o suporte.
+          </div>
+        </div>
+        <div class="accordion-item glass-card rounded-lg overflow-hidden">
+          <button class="w-full flex justify-between items-center p-stack-md text-left" data-accordion-toggle>
+            <span class="font-label-md text-ink">Encontrei um erro. Como reporto?</span>
+            <span class="material-symbols-outlined text-primary chevron-icon">expand_more</span>
+          </button>
+          <div class="accordion-content px-stack-md pb-stack-md text-body-md text-grey-text">
+            Envie para <a class="text-primary hover:underline" href="mailto:suporte@oalquimista.store?subject=Bug%20Report">suporte@oalquimista.store</a> com o assunto "Bug Report", incluindo o modelo do aparelho e a versão do iOS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guia rápido -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <h2 class="font-headline-md text-headline-md text-ink mb-stack-lg text-center">Guia rápido</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+      <div class="glass-card p-stack-lg rounded-xl reveal-section">
+        <span class="text-3xl block mb-3">📖</span>
+        <h3 class="font-headline-sm text-headline-sm text-ink mb-2">Catálogo de receitas</h3>
+        <p class="text-body-md text-grey-text">Toque em "+" para registar uma receita manualmente, ou use a importação inteligente.</p>
+      </div>
+      <div class="glass-card p-stack-lg rounded-xl reveal-section" style="transition-delay:50ms">
+        <span class="text-3xl block mb-3">👨‍🍳</span>
+        <h3 class="font-headline-sm text-headline-sm text-ink mb-2">Modo Cozinha</h3>
+        <p class="text-body-md text-grey-text">Abra uma receita e toque em "Cozinhar" para o passo a passo em ecrã inteiro, com temporizador por etapa.</p>
+      </div>
+      <div class="glass-card p-stack-lg rounded-xl reveal-section">
+        <span class="text-3xl block mb-3">🛒</span>
+        <h3 class="font-headline-sm text-headline-sm text-ink mb-2">Lista de compras</h3>
+        <p class="text-body-md text-grey-text">Na receita, toque em "Adicionar à lista de compras". Marque os itens conforme vai comprando.</p>
+      </div>
+      <div class="glass-card p-stack-lg rounded-xl reveal-section" style="transition-delay:50ms">
+        <span class="text-3xl block mb-3">🗓</span>
+        <h3 class="font-headline-sm text-headline-sm text-ink mb-2">Planeador de refeições</h3>
+        <p class="text-body-md text-grey-text">No separador Planeador, toque num dia para adicionar uma refeição e gere a lista de compras da semana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacidade -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg text-center" id="privacidade">
+    <div class="reveal-section glass-card max-w-3xl mx-auto p-10 rounded-xl">
+      <h2 class="font-headline-sm text-headline-sm mb-3">Privacidade</h2>
+      <a class="text-primary font-label-md uppercase tracking-widest hover:underline underline-offset-8" href="../../privacidade/pt-pt/">Ver Política de Privacidade →</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="px-margin-mobile md:px-margin-desktop py-stack-lg reveal-section">
+    <h2 class="font-headline-md text-headline-md text-ink mb-stack-lg text-center">Contacto</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-3xl mx-auto">
+      <div class="glass-card p-stack-lg rounded-xl text-center">
+        <h3 class="font-label-md text-label-md text-ink mb-2">✉️ Suporte geral</h3>
+        <a class="text-primary font-semibold hover:underline block mb-2" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+        <p class="text-label-sm text-grey-text">Respondemos em até 48 horas úteis.</p>
+      </div>
+      <div class="glass-card p-stack-lg rounded-xl text-center">
+        <h3 class="font-label-md text-label-md text-ink mb-2">🐛 Reportar erro</h3>
+        <a class="text-primary font-semibold hover:underline block mb-2" href="mailto:suporte@oalquimista.store?subject=Bug%20Report">suporte@oalquimista.store</a>
+        <p class="text-label-sm text-grey-text">Assunto: Bug Report.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">O seu livro de receitas pessoal — elegante, inteligente e sempre consigo.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explorar</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../">Início</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../sobre/pt-pt/">Sobre</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../loja/">Loja</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Suporte</span>
+      <a class="font-label-sm text-label-sm text-primary font-semibold" href="./">Central de Suporte</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../novidades/pt-pt/">Novidades</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../termos/pt-pt/">Termos de Utilização</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../privacidade/pt-pt/">Política de Privacidade</a>
+    </div>
+  </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../../">oalquimista.store</a></p>
+  </div>
+</footer>
+
+<script src="../../assets/js/theme.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html class="scroll-smooth" lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,62 +23,132 @@
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
   <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="../style.css" />
   <title>OAlquimista — What's New</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="site-nav">
-      <a href="../../">Home</a><span class="sep">·</span>
-      <a href="../../sobre/en/">About</a><span class="sep">·</span>
-      <a href="../../loja/">Store</a><span class="sep">·</span>
-      <a href="../../suporte/en/">Support</a><span class="sep">·</span>
-      <a href="./" class="active">What's New</a><span class="sep">·</span>
-      <a href="../../termos/en/">Terms</a><span class="sep">·</span>
-      <a href="../../privacidade/en/">Privacy</a>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
+
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <div class="flex items-center gap-stack-lg">
+      <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+      <div class="hidden lg:flex items-center gap-stack-lg ml-stack-lg">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../">Home</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../sobre/en/">About</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../loja/">Store</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="../../suporte/en/">Support</a>
+        <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="./">What's New</a>
+      </div>
     </div>
-    <div class="lang-switch">
+    <div class="flex items-center gap-stack-md">
+      <a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity p-2" href="../../loja/" aria-label="Store">shopping_bag</a>
+      <button class="lg:hidden material-symbols-outlined text-primary p-2" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+    </div>
+  </nav>
+  <div class="mobile-menu lg:hidden px-margin-mobile pb-4 flex flex-col gap-3" id="mobile-menu">
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../">Home</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../sobre/en/">About</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../loja/">Store</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../suporte/en/">Support</a>
+    <a class="font-label-md text-label-md text-primary font-bold" href="./">What's New</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../termos/en/">Terms</a>
+    <a class="font-label-md text-label-md text-on-surface-variant" href="../../privacidade/en/">Privacy</a>
+  </div>
+</header>
+
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop">
+  <!-- Hero -->
+  <section class="mb-stack-lg reveal-section max-w-3xl">
+    <img alt="OAlquimista" class="w-16 h-16 mb-6 rounded-2xl shadow-lg" src="../../assets/icons/hero-icon.png" width="64" height="64" />
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-3">What's New</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">What changed in each version of OAlquimista.</p>
+    <div class="lang-switch mt-6 justify-start">
       <a href="../">PT-BR</a>
       <a href="../pt-pt/">PT-PT</a>
-      <a href="./" class="active">EN</a>
+      <a class="active" href="./">EN</a>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto space-y-stack-lg">
+    <!-- Version 1.0.0 -->
+    <div class="reveal-section relative pl-8 border-l-2 border-outline-variant/30 pb-4">
+      <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary ring-4 ring-surface"></div>
+      <div class="glass-card p-stack-lg rounded-xl">
+        <div class="flex flex-wrap justify-between items-start gap-2 mb-4">
+          <div>
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-sm uppercase tracking-wider mb-2 inline-block">Version 1.0.0</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">First release</h3>
+          </div>
+          <time class="text-label-sm text-grey-text">June 13, 2026</time>
+        </div>
+        <ul class="space-y-2 text-on-surface-variant">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Recipe catalog</strong> — real-time search, grid or list view, a favorites carousel, and filters by category and tags.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Cook Mode</strong> — full-screen step-by-step that never sleeps, with a per-step timer and dynamic serving-size adjustment.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Intelligent import</strong> — import recipes from websites, camera (scanner + OCR), PDF, or free text using Apple Intelligence, which automatically extracts ingredients and steps.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Discover tab</strong> — a built-in browser to import from any site, plus recipe suggestions to explore.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Shopping list</strong> — generated from the ingredients of any recipe, with purchased items and text sharing.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Meal planner</strong> — organize breakfast, lunch, and dinner for the week and export to the iPhone Calendar.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span>Customizable <strong>categories and collections</strong>, with colors and icons.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Profile</strong> with recipe stats, favorites and cooked history, and iCloud sync status.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>Widget</strong> showing your next planned meal.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">check_circle</span><span><strong>iCloud</strong> sync across iPhone, iPad, and Mac.</span></li>
+        </ul>
+      </div>
     </div>
 
-    <header class="page-header">
-      <img src="../../assets/icons/hero-icon.png" alt="OAlquimista" />
-      <h1>What's New</h1>
-      <p class="intro">What changed in each version of OAlquimista.</p>
-    </header>
-
-    <div class="release">
-      <div class="version-row"><h2>Version 1.0.0</h2><span class="date">June 13, 2026</span></div>
-      <h3>First release</h3>
-      <ul>
-        <li><strong>Recipe catalog</strong> — real-time search, grid or list view, a favorites carousel, and filters by category and tags.</li>
-        <li><strong>Cook Mode</strong> — full-screen step-by-step that never sleeps, with a per-step timer and dynamic serving-size adjustment.</li>
-        <li><strong>Intelligent import</strong> — import recipes from websites, camera (scanner + OCR), PDF, or free text using Apple Intelligence, which automatically extracts ingredients and steps.</li>
-        <li><strong>Discover tab</strong> — a built-in browser to import from any site, plus recipe suggestions to explore.</li>
-        <li><strong>Shopping list</strong> — generated from the ingredients of any recipe, with purchased items and text sharing.</li>
-        <li><strong>Meal planner</strong> — organize breakfast, lunch, and dinner for the week and export to the iPhone Calendar.</li>
-        <li>Customizable <strong>categories and collections</strong>, with colors and icons.</li>
-        <li><strong>Profile</strong> with recipe stats, favorites and cooked history, and iCloud sync status.</li>
-        <li><strong>Widget</strong> showing your next planned meal.</li>
-        <li><strong>iCloud</strong> sync across iPhone, iPad, and Mac.</li>
-      </ul>
+    <!-- Coming soon -->
+    <div class="reveal-section relative pl-8 border-l-2 border-outline-variant/30">
+      <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-outline-variant ring-4 ring-surface"></div>
+      <div class="glass-card p-stack-lg rounded-xl border border-primary/20 bg-primary/5">
+        <div class="flex items-center gap-2 mb-4 text-primary">
+          <span class="material-symbols-outlined">auto_awesome</span>
+          <span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full text-label-sm uppercase tracking-wider">Coming soon</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">What's next</h3>
+        <ul class="space-y-2 text-on-surface-variant">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">arrow_forward</span><span><strong>AI Chef</strong> — recipe suggestions based on the ingredients you already have at home.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">arrow_forward</span><span><strong>Pantry</strong> — ingredient inventory with expiration alerts.</span></li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary scale-75">arrow_forward</span><span><strong>Ratings</strong> — star ratings and difficulty tags.</span></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="release">
-      <div class="version-row"><h2>Coming soon</h2></div>
-      <h3>What's next</h3>
-      <ul>
-        <li><strong>AI Chef</strong> — recipe suggestions based on the ingredients you already have at home.</li>
-        <li><strong>Pantry</strong> — ingredient inventory with expiration alerts.</li>
-        <li><strong>Ratings</strong> — star ratings and difficulty tags.</li>
-      </ul>
-    </div>
-
-    <footer>
-      <p>OAlquimista — <a href="../../">oalquimista.store</a></p>
-    </footer>
   </div>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full pt-stack-lg pb-stack-md mt-stack-lg">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+    <div class="col-span-1 md:col-span-1 space-y-4">
+      <span class="font-display-lg-mobile text-headline-sm text-primary">O Alquimista</span>
+      <p class="font-body-md text-body-md text-grey-text">Your personal recipe book — elegant, intelligent, always with you.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Explore</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../">Home</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../sobre/en/">About</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../loja/">Store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Support</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../suporte/en/">Support Center</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="mailto:suporte@oalquimista.store">suporte@oalquimista.store</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-label-md text-primary mb-2">Legal</span>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../termos/en/">Terms of Use</a>
+      <a class="font-label-sm text-label-sm text-grey-text hover:text-primary hover:underline decoration-primary/30 underline-offset-4 transition-colors" href="../../privacidade/en/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="border-t border-outline-variant/10 mt-12 pt-8 text-center px-margin-mobile">
+    <p class="font-label-sm text-label-sm text-grey-text">© 2026 OAlquimista — <a class="hover:text-primary hover:underline" href="../../">oalquimista.store</a></p>
+  </div>
+</footer>
+
+<script src="../../assets/js/theme.js" defer></script>
 </body>
 </html>
