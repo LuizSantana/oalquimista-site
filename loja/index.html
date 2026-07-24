@@ -434,6 +434,13 @@
       return;
     }
 
+    const totalUnits = items.reduce((sum, item) => sum + item.quantity, 0);
+    if (totalUnits < 6) {
+      status.textContent = `Pedido mínimo de 6 potes no total — você tem ${totalUnits}.`;
+      status.className = "text-body-md text-error";
+      return;
+    }
+
     if (!formToken) {
       status.textContent = "Ainda carregando o formulário — aguarde um instante e tente de novo.";
       status.className = "text-body-md text-error";
