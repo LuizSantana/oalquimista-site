@@ -283,9 +283,7 @@
           <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </label>
 
-        <!-- TODO: troque pelo seu site key depois de criar o widget em
-             dash.cloudflare.com/?to=/:account/turnstile -->
-        <div class="cf-turnstile" data-sitekey="SEU_TURNSTILE_SITE_KEY"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAD8sSMw_-k2XK-vh"></div>
 
         <button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded-lg hover:shadow-lg hover:scale-[1.01] transition-all duration-300" type="submit">Enviar pedido</button>
         <p id="order-status" class="text-body-md" role="status"></p>
@@ -345,8 +343,7 @@
 
 <script src="../assets/js/theme.js" defer></script>
 <script>
-  // Preencha com a URL real do backend depois do deploy (veja BackendNode/infra/deploy.sh).
-  const ORDERS_API_BASE = "https://SEU-SERVIDOR-AQUI/v1/orders";
+  const ORDERS_API_BASE = "https://oalquimista-api-dotnet-production.up.railway.app/v1/orders";
 
   const form = document.getElementById("order-form");
   const status = document.getElementById("order-status");
@@ -461,7 +458,10 @@
 
       if (!res.ok) throw new Error(`status ${res.status}`);
 
-      status.textContent = "Pedido enviado! Entraremos em contato por email em breve.";
+      const result = await res.json();
+      status.textContent = result.orderNumber
+        ? `Pedido #${result.orderNumber} enviado! Entraremos em contato por email em breve.`
+        : "Pedido enviado! Entraremos em contato por email em breve.";
       status.className = "text-body-md text-primary font-semibold";
       form.reset();
       qtyInputs.forEach((input) => (input.value = 0));
