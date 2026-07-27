@@ -344,6 +344,10 @@
 <script src="../assets/js/theme.js" defer></script>
 <script>
   const ORDERS_API_BASE = "https://oalquimista-api-dotnet-production.up.railway.app/v1/orders";
+  // Catálogo fica no ar normalmente — só o envio do pedido (POST) fica
+  // bloqueado até o dono do site confirmar que está pronto pra receber
+  // pedido de verdade. Flip pra true quando der OK.
+  const ORDERS_OPEN = false;
 
   const form = document.getElementById("order-form");
   const status = document.getElementById("order-status");
@@ -437,6 +441,12 @@
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (!ORDERS_OPEN) {
+      status.textContent = "Ainda não estamos recebendo pedidos por aqui — em breve! Escreva para suporte@oalquimista.store se quiser ser avisado.";
+      status.className = "text-body-md text-error";
+      return;
+    }
 
     const items = collectItems().map(({ product, quantity }) => ({ product, quantity }));
     if (items.length === 0) {
