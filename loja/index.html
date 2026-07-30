@@ -443,7 +443,7 @@
     event.preventDefault();
 
     if (!ORDERS_OPEN) {
-      status.textContent = "Ainda não estamos recebendo pedidos por aqui — em breve! Escreva para suporte@oalquimista.store se quiser ser avisado.";
+      status.textContent = "Ainda não estamos recebendo pedidos por aqui — em breve! Escreva para atendimento@oalquimista.store se quiser ser avisado.";
       status.className = "text-body-md text-error";
       return;
     }
@@ -502,7 +502,7 @@
       if (window.turnstile) window.turnstile.reset();
       fetchFormToken();
     } catch (err) {
-      status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para suporte@oalquimista.store.";
+      status.textContent = "Não foi possível enviar o pedido agora. Tente novamente ou escreva para atendimento@oalquimista.store.";
       status.className = "text-body-md text-error";
     }
   });
