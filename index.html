@@ -6,16 +6,19 @@
   <title>OAlquimista — Seu livro de receitas pessoal</title>
   <meta name="description" content="OAlquimista: catálogo de receitas, Modo Cozinha com timers, importação inteligente com Apple Intelligence, lista de compras e planejador de refeições. Sem anúncios." />
   <link rel="canonical" href="https://oalquimista.store/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://oalquimista.store/" />
+  <link rel="alternate" hreflang="x-default" href="https://oalquimista.store/" />
   <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="OAlquimista" />
+  <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="OAlquimista — Seu livro de receitas pessoal" />
   <meta property="og:description" content="Catálogo de receitas, Modo Cozinha com timers, importação inteligente com Apple Intelligence, lista de compras e planejador de refeições. Sem anúncios." />
   <meta property="og:url" content="https://oalquimista.store/" />
   <meta property="og:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="OAlquimista — Seu livro de receitas pessoal" />
   <meta name="twitter:description" content="Catálogo de receitas, Modo Cozinha com timers, importação inteligente, lista de compras e planejador de refeições. Sem anúncios." />
   <meta name="twitter:image" content="https://oalquimista.store/assets/icons/icon-512.png" />
@@ -23,13 +26,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "MobileApplication",
     "name": "OAlquimista",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "iOS, iPadOS, macOS",
+    "applicationCategory": "FoodApplication",
+    "operatingSystem": "iOS, iPadOS, macOS, Android",
     "url": "https://oalquimista.store/",
     "description": "Livro de receitas pessoal com catálogo de receitas, Modo Cozinha com timers, importação inteligente e planejador de refeições. Sem anúncios.",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/ComingSoon"
+    }
   }
   </script>
 
@@ -38,6 +46,7 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="assets/js/tailwind-config.js"></script>
   <link rel="stylesheet" href="assets/css/theme.css" />
+  <noscript><style>.reveal-section{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body class="bg-surface font-body-md text-on-surface">
 <div class="noise-overlay"></div>

@@ -60,9 +60,19 @@
   100% { transform: scale(1); }
 }
 
-/* Mobile nav drawer */
-.mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out; }
+/* Mobile nav drawer. The pb-4 utility on the element would leak 16px of
+   padding below the fixed header even when closed (max-height clips content,
+   not padding) — zero it out unless open. */
+.mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out, padding 0.35s ease-out; }
+.mobile-menu:not(.open) { padding-top: 0; padding-bottom: 0; }
 .mobile-menu.open { max-height: 480px; }
+
+/* Compact wordmark on phones — 36px eats too much of the h-20 bar next to
+   the cart + menu icons. Targets the first link in the nav (the logo) on
+   every page without touching 17 HTML files. */
+@media (max-width: 767px) {
+  #top-nav nav > div:first-child > a:first-child { font-size: 26px; line-height: 34px; }
+}
 
 /* Subtle artisanal-paper grain — inline SVG noise, no third-party host. */
 .noise-overlay {
