@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Confirmar exclusão de conta OAlquimista." />
+  <link rel="canonical" href="https://oalquimista.store/excluir-conta/confirmar/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://oalquimista.store/excluir-conta/confirmar/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://oalquimista.store/excluir-conta/confirmar/pt-pt/" />
+  <link rel="alternate" hreflang="en" href="https://oalquimista.store/excluir-conta/confirmar/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://oalquimista.store/excluir-conta/confirmar/" />
+  <link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+  <title>OAlquimista — Confirmar exclusão de conta</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../../assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
+  <noscript><style>.reveal-section{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<div class="noise-overlay"></div>
+
+<header class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/20" id="top-nav">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-full">
+    <a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight" href="../../">O Alquimista</a>
+  </nav>
+</header>
+
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop min-h-[70vh] flex items-center">
+  <div class="glass-card max-w-xl mx-auto p-8 md:p-12 rounded-xl reveal-section text-center space-y-6" id="card">
+    <span class="material-symbols-outlined text-error" style="font-size: 48px">warning</span>
+    <h1 class="font-headline-md text-headline-md text-on-surface">Confirmar exclusão da conta</h1>
+    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Isso apaga permanentemente sua conta, receitas sincronizadas, categorias, coleções, assinatura e histórico de uso de IA. <strong>Não é possível desfazer.</strong></p>
+    <div id="no-token" class="hidden space-y-3">
+      <p class="text-body-md text-error">Link incompleto — abra o link exatamente como veio no e-mail, ou peça um novo em <a class="text-primary hover:underline" href="../">excluir-conta</a>.</p>
+    </div>
+    <div id="confirm-area" class="space-y-4">
+      <button class="w-full rounded-lg bg-error text-white font-label-md text-label-md py-3 hover:opacity-90 transition-opacity" id="confirm-button">Sim, excluir minha conta permanentemente</button>
+      <a class="block text-on-surface-variant font-label-md hover:underline" href="../../">Cancelar</a>
+    </div>
+    <p id="status" class="text-body-md" role="status" aria-live="polite"></p>
+  </div>
+</main>
+
+<script src="../../assets/js/theme.js" defer></script>
+<script>
+  const ACCOUNT_API_BASE = "https://oalquimista-api-dotnet-production.up.railway.app/v1/account";
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+  const confirmArea = document.getElementById("confirm-area");
+  const noToken = document.getElementById("no-token");
+  const status = document.getElementById("status");
+  const confirmButton = document.getElementById("confirm-button");
+
+  if (!token) {
+    confirmArea.classList.add("hidden");
+    noToken.classList.remove("hidden");
+  } else {
+    confirmButton.addEventListener("click", async () => {
+      confirmButton.disabled = true;
+      status.textContent = "Excluindo...";
+      status.className = "text-body-md";
+
+      try {
+        const res = await fetch(`${ACCOUNT_API_BASE}/delete-confirm`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
+        });
+        if (!res.ok) {
+          status.textContent = "Link inválido ou expirado (válido por 1 hora, uso único). Peça um novo em excluir-conta.";
+          status.className = "text-body-md text-error";
+          confirmButton.disabled = false;
+          return;
+        }
+        confirmArea.classList.add("hidden");
+        status.textContent = "Conta excluída. Sentiremos sua falta — obrigado por ter usado o OAlquimista.";
+        status.className = "text-body-md text-primary font-semibold";
+      } catch (err) {
+        status.textContent = "Não foi possível confirmar agora. Tente novamente ou escreva para suporte@oalquimista.store.";
+        status.className = "text-body-md text-error";
+        confirmButton.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>

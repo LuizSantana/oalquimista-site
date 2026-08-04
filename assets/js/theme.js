@@ -44,15 +44,32 @@
   }
 
   // FAQ accordion — event delegation on any [data-accordion-toggle] button.
+  // max-height is measured from the real content (scrollHeight), not a
+  // fixed CSS number — a hardcoded cap silently clips any answer taller
+  // than it, with no ellipsis or fade, just cut-off text.
+  function collapseAccordionItem(item) {
+    item.classList.remove("active");
+    const content = item.querySelector(".accordion-content");
+    if (content) content.style.maxHeight = "";
+  }
+  function expandAccordionItem(item) {
+    item.classList.add("active");
+    const content = item.querySelector(".accordion-content");
+    if (content) content.style.maxHeight = content.scrollHeight + "px";
+  }
   document.querySelectorAll("[data-accordion-toggle]").forEach((button) => {
     button.addEventListener("click", () => {
       const item = button.closest(".accordion-item");
       if (!item) return;
       const isOpen = item.classList.contains("active");
       item.parentElement.querySelectorAll(".accordion-item").forEach((other) => {
-        if (other !== item) other.classList.remove("active");
+        if (other !== item) collapseAccordionItem(other);
       });
-      item.classList.toggle("active", !isOpen);
+      if (isOpen) {
+        collapseAccordionItem(item);
+      } else {
+        expandAccordionItem(item);
+      }
     });
   });
 })();

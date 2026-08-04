@@ -46,9 +46,11 @@
 }
 .lang-switch a.active { color: #fff; background: #8B7200; border-color: #8B7200; }
 
-/* Accordion (FAQ) */
+/* Accordion (FAQ) — max-height is set inline by theme.js from the content's
+   real scrollHeight on open (see toggle handler), not a fixed number here.
+   A hardcoded cap (previously 600px) silently clipped any answer taller
+   than that — no ellipsis, no fade, text just cut off mid-sentence. */
 .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-.accordion-item.active .accordion-content { max-height: 600px; }
 .accordion-item.active .chevron-icon { transform: rotate(180deg); }
 .chevron-icon { transition: transform 0.3s ease; }
 
