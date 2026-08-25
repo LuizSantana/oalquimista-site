@@ -32,14 +32,19 @@
     "operatingSystem": "iOS, iPadOS, macOS, Android",
     "url": "https://oalquimista.store/",
     "description": "Livro de receitas pessoal com catálogo de receitas, Modo Cozinha com timers, importação inteligente e planejador de refeições. Sem anúncios.",
+    "installUrl": "https://apps.apple.com/us/app/oalquimista-livro-de-receitas/id6793457158",
+    "downloadUrl": "https://apps.apple.com/us/app/oalquimista-livro-de-receitas/id6793457158",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "BRL",
-      "availability": "https://schema.org/ComingSoon"
+      "availability": "https://schema.org/InStock"
     }
   }
   </script>
+
+  <!-- Smart App Banner: sugere abrir o app no Safari iOS quando já instalado. -->
+  <meta name="apple-itunes-app" content="app-id=6793457158" />
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
@@ -92,13 +97,13 @@
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elegante, inteligente e sempre com você.</p>
       </div>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md pt-stack-md">
-        <div class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full flex items-center gap-3 shadow-xl select-none">
+        <a href="https://apps.apple.com/us/app/oalquimista-livro-de-receitas/id6793457158" target="_blank" rel="noopener" class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full flex items-center gap-3 shadow-xl hover:scale-105 active:scale-95 transition-transform">
           <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">apps</span>
           <div class="text-left">
-            <p class="text-[10px] leading-none uppercase tracking-widest font-semibold opacity-70">Em breve na</p>
+            <p class="text-[10px] leading-none uppercase tracking-widest font-semibold opacity-70">Baixar na</p>
             <p class="text-xl font-bold leading-none">App Store</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -286,11 +291,17 @@
   <section class="py-stack-lg text-center reveal-section">
     <div class="px-margin-mobile">
       <h3 class="font-headline-sm text-headline-sm mb-6">Pronto pra começar?</h3>
-      <p class="font-body-md text-on-surface-variant mb-6">OAlquimista chega em breve à App Store.</p>
-      <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-2xl hover:scale-105 active:scale-95 transition-all" href="suporte/">
-        Precisa de ajuda? Central de Suporte
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-      </a>
+      <p class="font-body-md text-on-surface-variant mb-6">OAlquimista já está disponível na App Store.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md">
+        <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-2xl hover:scale-105 active:scale-95 transition-all" href="https://apps.apple.com/us/app/oalquimista-livro-de-receitas/id6793457158" target="_blank" rel="noopener">
+          Baixar na App Store
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+        <a class="inline-flex items-center gap-2 border border-outline-variant text-on-surface px-10 py-5 rounded-full font-label-md text-label-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all" href="suporte/">
+          Precisa de ajuda? Central de Suporte
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
     </div>
   </section>
 </main>
