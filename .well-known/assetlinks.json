@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls", "delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "br.com.luizsantana.oalquimista",
+      "sha256_cert_fingerprints": ["AB:01:B7:F0:0C:1F:F3:2D:BE:CD:95:F5:3E:CE:94:4E:ED:93:E6:C9:F1:D2:36:88:11:20:27:9A:A2:2A:59:E5"]
+    }
+  }
+]
